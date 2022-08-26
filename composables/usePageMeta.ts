@@ -52,7 +52,8 @@ export const usePageMeta = (
       ? [
           {
             src: umamiUri,
-            dataWebsiteId: websiteId,
+            "data-website-id": websiteId,
+            "data-domains": "christianpreston.com",
             async: true,
             defer: true,
           },
