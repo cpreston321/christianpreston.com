@@ -23,4 +23,8 @@ export default defineNuxtConfig({
   unocss: {
     preflight: true,
   },
+
+  nitro: {
+    preset: "vercel",
+  },
 });

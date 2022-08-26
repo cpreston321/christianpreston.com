@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-usePageMeta("Contact Me");
+usePageMeta("Contact Form");
 definePageMeta({
   pageTransition: {
     name: "fade",
@@ -9,5 +9,5 @@ definePageMeta({
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold">Contact Form Me Coming Soon...</h1>
+  <h1 class="text-3xl font-bold">Contact form coming soon...</h1>
 </template>

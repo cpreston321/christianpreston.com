@@ -25,7 +25,7 @@ const truncate = (str: string, length: number) => {
       <div
         class="relative w-full h-full bg-cover bg-top bg-no-repeat rounded-6"
         :style="{
-          backgroundImage: `url('/assets/projects/${project.preview}')`,
+          backgroundImage: `url('/projects/${project.preview}')`,
         }"
       ></div>
     </a>
