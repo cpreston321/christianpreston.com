@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { reset } from "@formkit/core";
-import { useToast, POSITION } from "vue-toastification";
+import * as toastNoti from "vue-toastification";
+
+const { useToast, POSITION } = toastNoti;
 
 const toast = useToast();
 
