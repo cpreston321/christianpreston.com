@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL,
   },
-  css: ["~/assets/formkit.css"],
+  css: ["@/assets/formkit.css"],
   /**
    * Modules
    * @see https://modules.nuxtjs.org/?version=3.x
