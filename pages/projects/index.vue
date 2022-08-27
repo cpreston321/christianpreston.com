@@ -32,7 +32,7 @@ definePageMeta({
 
 <template>
   <div ref="target" class="flex flex-col">
-    <div class="flex flex-row mb-2 md:mb-4">
+    <div class="flex flex-row mb-4 md:mb-6">
       <NuxtLink
         class="self-center text-xl md:text-4xl hover:opacity-70 mr-3"
         to="/"

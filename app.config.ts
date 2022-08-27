@@ -1,14 +1,17 @@
 export default defineAppConfig({
   socials: [
     {
+      name: "Github",
       icon: "github-icon dark:text-white",
       url: "https://github.com/cpreston321",
     },
     {
+      name: "Twitter",
       icon: "twitter",
       url: "https://twitter.com/christian_ggg",
     },
     {
+      name: "Linkedin",
       icon: "linkedin-icon",
       url: "https://www.linkedin.com/in/cpreston321/",
     },

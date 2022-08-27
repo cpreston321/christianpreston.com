@@ -1,0 +1,87 @@
+.formkit-outer {
+  @apply mb-3 md:mb-5;
+}
+.modal-footer > .formkit-outer {
+  @apply m-0;
+}
+.formkit-label {
+  @apply block mb-1 md:mb-2 ml-1 text-sm md:text-base font-bold text-black;
+  @apply dark:text-white;
+}
+.formkit-inner,
+.formkit-input[type="submit"] {
+  @apply flex items-center min-h-11 border border-gray-200 rounded-2 w-full py-1 md:py-2 px-3 backdrop-filter backdrop-blur-md text-black text-sm md:text-base placeholder-gray-800 outline-none transition ring-1 ring-transparent focus-within:ring-black;
+  @apply bg-white bg-opacity-40 shadow;
+  @apply dark:bg-opacity-20 dark:shadow-none darl:border-black dark:text-white dark:focus-within:ring-white dark:placeholder-white!;
+}
+.formkit-input {
+  @apply w-full bg-transparent placeholder-gray-400 outline-none disabled:opacity-50;
+  @apply dark:placeholder-gray-300;
+}
+.formkit-input[type="submit"] {
+  @apply backdrop-filter backdrop-blur-md text-black font-medium max-w-xs relative inline-flex justify-center items-center uppercase;
+}
+.formkit-help {
+  @apply text-xs text-gray-500 ml-1;
+}
+.formkit-messages {
+  @apply list-none p-0 mt-2 mb-0 ml-1;
+}
+.formkit-message {
+  @apply text-red-500 mb-3 text-xs;
+}
+
+.btn-loader[data-loading="true"]::before,
+[data-loading] [data-type="submit"] .formkit-input::before {
+  -webkit-animation: rotate 0.5s linear infinite;
+  animation: rotate 0.5s linear infinite;
+  width: 1rem;
+  border: 0.1428571429em solid #fff;
+  border-right-color: transparent;
+  margin-right: 0.75em;
+}
+
+.btn-loader::before,
+[data-type="submit"] .formkit-input::before {
+  box-sizing: border-box;
+  content: "";
+  width: 0;
+  margin-right: 0;
+  height: 1rem;
+  border: 0 solid transparent;
+  border-radius: 1rem;
+  transition: width 0.25s, border 0.25s, margin-right 0.25s;
+}
+
+@-ms-keyframes rotate {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,40 +1,17 @@
 <script lang="ts" setup>
-import { MotionVariants } from "@vueuse/motion";
+const target = useAnimation();
+usePageMeta("About Me", "This more about me and my life.");
 
-const target = ref(null);
-const variants = ref<MotionVariants>({
-  initial: {
-    y: 100,
-    opacity: 0,
-  },
-  enter: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: 500,
-    },
-  },
-});
 const myBirthday = ref(new Date(1998, 12, 29));
 const myAge = computed(() => {
   const diff = Math.abs(new Date().getTime() - myBirthday.value.getTime());
   return Math.floor(diff / (1000 * 3600 * 24 * 365));
 });
-
-useMotion(target, variants);
-
-usePageMeta("About Me", "This more about me and my life.");
-definePageMeta({
-  pageTransition: {
-    name: "fade",
-    mode: "out-in",
-  },
-});
 </script>
 
 <template>
   <div ref="target" class="flex flex-col">
-    <div class="flex flex-row mb-2 md:mb-4">
+    <div class="flex flex-row mb-4 md:mb-6">
       <NuxtLink
         class="self-center text-xl md:text-4xl hover:opacity-70 mr-3"
         to="/"
@@ -45,15 +22,34 @@ definePageMeta({
         About Me
       </h1>
     </div>
+    <nuxt-img
+      class="w-45 md:w-30 rounded-36 mb-6 shadow"
+      src="/profile_image.jpeg"
+      alt="Profile"
+    />
     <p class="text-md md:text-xl mb-3">
-      I am a {{ myAge }} years old, I have been programing since I was 13 and I
-      will never stop. In my free-time I contribute to open source projects,
-      play video games, invest into stocks. when I can. I am always looking for
-      new ways to improve my skills. I will be a great addition to anyone who is
-      looking for a developer.
+      I currently work at
+      <strong>
+        <a
+          class="hover:opacity-75"
+          target="_blank"
+          href="https://www.linkedin.com/company/veritone-inc-/"
+          title="Veritone"
+        >
+          Veritone 💼
+        </a>
+      </strong>
+      as a Software Developer.
+    </p>
+    <p class="text-md md:text-xl mb-3">
+      I am {{ myAge }} years old. I have been programing since I was 13 and will
+      never stop 😎. In my free-time I like to contribute to open source
+      projects, play video games, invest into stocks. Always looking for new
+      ways to improve my skill set.
     </p>
     <p class="text-md md:text-xl mb-12">
-      If you would like to contact me about business inquiries please
+      If you would like to contact me about business inquiries please feel free
+      to
       <a class="underline" href="mailto:toptiergaming34@gmail.com">email</a> me.
     </p>
 

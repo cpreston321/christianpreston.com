@@ -8,10 +8,13 @@ const { socials } = useAppConfig();
   <div class="i-logos-linkedin-icon"></div> -->
   <ul v-if="socials.length > 0" class="flex flex-row my-3">
     <li v-for="social in socials" :key="social.name" class="mr-4">
-      <a class="hover:opacity-80" :href="social.url" target="_blank">
-        <div
-          :class="`i-logos-${social.icon}  shadow-2xl dark:shadow-white`"
-        ></div>
+      <a
+        class="hover:opacity-80"
+        target="_blank"
+        :href="social.url"
+        :title="social.name"
+      >
+        <div :class="`i-logos-${social.icon} shadow-2xl dark:shadow-white`" />
       </a>
     </li>
   </ul>
