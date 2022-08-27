@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from "nuxt";
+import transformerDirective from "@unocss/transformer-directives";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -8,7 +9,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL,
   },
-  css: ["@/assets/formkit.css"],
+  css: ["@unocss/reset/tailwind.css", "@/assets/formkit.css"],
   /**
    * Modules
    * @see https://modules.nuxtjs.org/?version=3.x
@@ -35,7 +36,47 @@ export default defineNuxtConfig({
     name: "fade",
     mode: "out-in",
   },
+
+  /** Module Options */
+  schemaOrg: {
+    canonicalHost: "https://christianpreston.com",
+    defaultLanguage: "en-US",
+  },
   unocss: {
-    preflight: true,
+    // presets
+    uno: true,
+    icons: {
+      scale: 1.2,
+    },
+    webFonts: {
+      fonts: {
+        sans: "DM Sans",
+        serif: "DM Serif Display",
+        mono: "DM Mono",
+      },
+    },
+    typography: true,
+    theme: {
+      animation: {
+        keyframes: {
+          blob: '{ 0%,100%{ transform: translate(0, 0) scale(1) } 25%{ transform: "translate(20px, -30px) scale(1.1)" } 50%{ transform: translate(0, 40px) scale(1) } 75%{ transform: translate(-30px, -25px) scale(0.9) }}',
+        },
+        durations: {
+          blob: "10s",
+        },
+        timingFns: {
+          blob: "cubic-bezier(0.25,0.1,0.25,1)",
+        },
+        counts: {
+          blob: "infinite",
+        },
+      },
+    },
+
+    transformers: [
+      transformerDirective({
+        enforce: "pre",
+      }),
+    ],
   },
 });

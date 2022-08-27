@@ -1,13 +1,10 @@
 <script lang="ts" setup>
 import { reset } from "@formkit/core";
-import * as toastNoti from "vue-toastification";
-
-const { useToast, POSITION } = toastNoti;
-
-const toast = useToast();
 
 usePageMeta("Contact Form", "Contact me for any questions or inquiries.");
 
+const router = useRouter();
+const target = useAnimation();
 const payload = ref({
   name: "",
   email: "",
@@ -26,40 +23,23 @@ const submit = async () => {
     });
 
     if (data.ok) {
-      toast.success("Success, Thank you for submitting.", {
-        position: POSITION.BOTTOM_RIGHT,
-        timeout: 2000,
-      });
       reset("contact", {
         name: "",
         email: "",
         message: "",
         bot_field: "",
       });
+      router.push("/contact/success");
     }
   } catch (error) {
-    toast.error("Error couldn't submit contact information.", {
-      position: POSITION.BOTTOM_RIGHT,
-      timeout: 2000,
-    });
     console.error("Error submitting form", error);
   }
 };
 </script>
 
 <template>
-  <div>
-    <div class="flex flex-row mb-4 md:mb-6">
-      <NuxtLink
-        class="self-center text-xl md:text-4xl hover:opacity-70 mr-3"
-        to="/"
-      >
-        <div class="i-eva-arrow-back-fill" />
-      </NuxtLink>
-      <h1 class="self-center font-bold text-3xl sm:text-5xl md:text-6xl">
-        Contact Me
-      </h1>
-    </div>
+  <div ref="target">
+    <Title>Contact Me</Title>
     <FormKit type="form" id="contact" @submit="submit" v-model="payload">
       <FormKit name="bot_field" type="hidden" value="" />
       <FormKit

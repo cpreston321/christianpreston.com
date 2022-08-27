@@ -5,7 +5,7 @@ usePageMeta("Home");
 
 <template>
   <div ref="target" class="flex flex-col">
-    <nuxt-img
+    <img
       class="w-45 md:w-30 rounded-36 mb-3 shadow"
       src="/profile_image.jpeg"
       alt="Profile"

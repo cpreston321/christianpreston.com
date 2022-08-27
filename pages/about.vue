@@ -11,18 +11,8 @@ const myAge = computed(() => {
 
 <template>
   <div ref="target" class="flex flex-col">
-    <div class="flex flex-row mb-4 md:mb-6">
-      <NuxtLink
-        class="self-center text-xl md:text-4xl hover:opacity-70 mr-3"
-        to="/"
-      >
-        <div class="i-eva-arrow-back-fill" />
-      </NuxtLink>
-      <h1 class="self-center font-bold text-3xl sm:text-5xl md:text-6xl">
-        About Me
-      </h1>
-    </div>
-    <nuxt-img
+    <Title>About Me</Title>
+    <img
       class="w-45 md:w-30 rounded-36 mb-6 shadow"
       src="/profile_image.jpeg"
       alt="Profile"

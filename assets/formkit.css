@@ -5,18 +5,14 @@
   @apply m-0;
 }
 .formkit-label {
-  @apply block mb-1 md:mb-2 ml-1 text-sm md:text-base font-bold text-black;
-  @apply dark:text-white;
+  @apply block mb-1 md:mb-2 ml-1 text-sm md:text-base font-bold text-black dark:text-white;
 }
 .formkit-inner,
 .formkit-input[type="submit"] {
-  @apply flex items-center min-h-11 border border-gray-200 rounded-2 w-full py-1 md:py-2 px-3 backdrop-filter backdrop-blur-md text-black text-sm md:text-base placeholder-gray-800 outline-none transition ring-1 ring-transparent focus-within:ring-black;
-  @apply bg-white bg-opacity-40 shadow;
-  @apply dark:bg-opacity-20 dark:shadow-none darl:border-black dark:text-white dark:focus-within:ring-white dark:placeholder-white!;
+  @apply flex items-center min-h-11 border border-gray-200 rounded-2 w-full py-1 md:py-2 px-3 backdrop-filter backdrop-blur-md text-black text-sm md:text-base placeholder-gray-800 outline-none transition ring-1 ring-transparent focus-within:ring-black bg-white bg-opacity-40 shadow dark:bg-opacity-20 dark:shadow-none darl:border-black dark:text-white dark:focus-within:ring-white dark:placeholder-white!;
 }
 .formkit-input {
-  @apply w-full bg-transparent placeholder-gray-400 outline-none disabled:opacity-50;
-  @apply dark:placeholder-gray-300;
+  @apply w-full bg-transparent placeholder-gray-400 outline-none disabled:opacity-50 dark:placeholder-gray-300;
 }
 .formkit-input[type="submit"] {
   @apply backdrop-filter backdrop-blur-md text-black font-medium max-w-xs relative inline-flex justify-center items-center uppercase;

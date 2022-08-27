@@ -22,9 +22,10 @@ const truncate = (str: string, length: number) => {
     :key="project.name"
   >
     <a class="h-46 md:h-48" :href="project.link" target="_blank">
-      <nuxt-img
+      <img
         class="relative w-full h-full object-cover object-top rounded-6"
         :src="`/projects/${project.preview}`"
+        :alt="project.name"
       />
     </a>
     <div class="px-2 mt-2 md:mt-3">

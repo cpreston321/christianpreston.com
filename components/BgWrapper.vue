@@ -4,12 +4,14 @@ const blobsPositions: string[] = [
   "bottom-0 left-3/4",
   "top-3/4 right-1/2",
   "bottom-1/2 left-1/2",
+  "top-1/2 left-0",
 ];
 const blobBgColors: string[] = [
   "bg-teal",
-  "bg-purple animate-delay-400",
+  "bg-purple animate-delay-200",
   "bg-blue",
-  "bg-pink animate-delay-800",
+  "bg-pink animate-delay-400",
+  "bg-cyan animate-delay-400 w-45! h-15!",
 ];
 
 // create random blob positions and colors
