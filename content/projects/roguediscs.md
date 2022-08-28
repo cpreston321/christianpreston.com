@@ -5,6 +5,6 @@ icon: roguediscs/icon.png
 logo: roguediscs/logo.png
 preview: roguediscs/preview.png
 link: https://roguediscs.com/
-tags: [php, nuxt, tailwindcss, new]
+tags: [php, nuxt, tailwindcss, js, new]
 created_at: 2019-02-15
 ---

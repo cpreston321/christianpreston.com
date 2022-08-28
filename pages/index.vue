@@ -14,7 +14,7 @@ usePageMeta("Home");
       Hi, I'm Christian Preston
     </h1>
     <p class="text-md md:text-xl">
-      Software Developer, Gamer & Technology Enthusiast. Currently I live in
+      Software Engineer, Gamer & Technology Enthusiast. Currently I live in
       <strong>Indianapolis, Indiana</strong>. I'am currently open for any
       freelance jobs.
     </p>

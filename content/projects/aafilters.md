@@ -5,6 +5,6 @@ icon: aafilters/icon.png
 logo: aafilters/logo.png
 preview: aafilters/preview.png
 link: https://aafilters.com
-tags: [php, html, bootstrap, re-design]
+tags: [php, html, bootstrap, js, re-design]
 created_at: 2019-02-15
 ---

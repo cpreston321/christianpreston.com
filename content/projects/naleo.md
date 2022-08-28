@@ -5,6 +5,6 @@ icon: naleo/icon.png
 logo: naleo/logo.png
 preview: naleo/preview.png
 link: https://naleo.org
-tags: [wordpress, timber, re-design]
+tags: [wordpress, timber, js]
 created_at: 2019-02-15
 ---

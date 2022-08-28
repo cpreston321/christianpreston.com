@@ -18,18 +18,20 @@ const myAge = computed(() => {
       alt="Profile"
     />
     <p class="text-md md:text-xl mb-3">
-      I currently work at
+      I currently work a
+      <span class="font-medium font-italic">Software Engineer</span> at
       <strong>
         <a
-          class="hover:opacity-75"
+          class="hover:opacity-75 underline"
           target="_blank"
           href="https://www.linkedin.com/company/veritone-inc-/"
           title="Veritone"
         >
-          Veritone 💼
+          Veritone
         </a>
+        💼
       </strong>
-      as a Software Developer.
+      .
     </p>
     <p class="text-md md:text-xl mb-3">
       I am {{ myAge }} years old. I have been programing since I was 13 and will
@@ -39,8 +41,7 @@ const myAge = computed(() => {
     </p>
     <p class="text-md md:text-xl mb-12">
       If you would like to contact me about business inquiries please feel free
-      to
-      <a class="underline" href="mailto:toptiergaming34@gmail.com">email</a> me.
+      to <NuxtLink class="underline" to="/contact">contact me</NuxtLink>.
     </p>
 
     <h2 class="font-bold text-2xl sm:text-3xl mb-2">Social Links</h2>

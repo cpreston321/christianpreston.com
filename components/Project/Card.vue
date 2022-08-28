@@ -17,7 +17,7 @@ const truncate = (str: string, length: number) => {
 
 <template>
   <div
-    class="flex flex-col justify-between w-full p-4 bg-opacity-70 bg-white dark:bg-[#1f1f1f] dark:bg-opacity-80! rounded-8 shadow-xl w-[350px] h-[390px] overflow-hidden"
+    class="flex flex-col justify-between w-full p-4 bg-opacity-70 bg-white dark:bg-[#1f1f1f] dark:bg-opacity-80! rounded-8 shadow-xl w-[350px] overflow-hidden"
     v-for="project in projects"
     :key="project.name"
   >
@@ -31,7 +31,9 @@ const truncate = (str: string, length: number) => {
     <div class="px-2 mt-2 md:mt-3">
       <ProjectTags :tags="project.tags" />
       <h3 class="font-bold text-2xl md:text-3xl mb-2">{{ project.title }}</h3>
-      <p class="text-xs md:text-sm">{{ truncate(project.description, 120) }}</p>
+      <p class="text-xs md:text-sm" :title="project.description">
+        {{ project.description }}
+      </p>
       <a
         :href="project.link"
         target="_blank"

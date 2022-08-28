@@ -5,6 +5,6 @@ icon: discountfilters/icon.webp
 logo: discountfilters/logo.webp
 preview: discountfilters/preview.png
 link: https://discountfilters.com
-tags: [php, html, bootstrap, re-design]
+tags: [php, html, bootstrap, js, re-design]
 created_at: 2018-04-01
 ---
