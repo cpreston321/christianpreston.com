@@ -15,7 +15,7 @@
     "@unocss/nuxt": "^0.45.13",
     "@vueuse/motion": "^2.0.0-beta.12",
     "@vueuse/nuxt": "^9.1.1",
-    "nuxt": "npm:nuxt3@latest",
+    "nuxt": "^3.0.0-rc.9",
     "nuxt-schema-org": "^1.1.0-beta.0"
   },
   "dependencies": {
