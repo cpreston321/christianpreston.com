@@ -1,5 +1,5 @@
 import { defineNuxtConfig } from "nuxt";
-import transformerDirective from "@unocss/transformer-directives";
+import { transformerDirectives, transformerVariantGroup } from "unocss";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -74,7 +74,8 @@ export default defineNuxtConfig({
     },
 
     transformers: [
-      transformerDirective({
+      transformerVariantGroup(),
+      transformerDirectives({
         enforce: "pre",
       }),
     ],

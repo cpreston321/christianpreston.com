@@ -1,14 +1,14 @@
 /**
  * usePageMeta - Composable hook to setup meta tags for a page
  *
+ * @param title - The og:title of the page
+ * @param desc - The og:description of the page
+ * @param image - The og:image of the page
+ *
  * @example
  * <script lang setup>
  *   usePageMeta('Home');
  * </script>
- *
- * @param title - The og:title of the page
- * @param desc - The og:description of the page
- * @param image - The og:image of the page
  */
 export const usePageMeta = (
   title: string,
@@ -29,8 +29,6 @@ export const usePageMeta = (
     title,
     titleTemplate: `Portfolio - %s`,
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "description", content: desc },
       { name: "og:title", content: title },
       { name: "og:site_name", content: name },

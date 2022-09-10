@@ -49,7 +49,11 @@ definePageMeta({
       placeholder="Search through my projects"
     /> -->
     <div v-if="projects.length" class="grid grid-cols sm:grid-cols-2 gap-4">
-      <ProjectCard :projects="projects" />
+      <ProjectCard
+        v-for="project in projects"
+        :key="project.name"
+        :project="project"
+      />
     </div>
   </div>
 </template>

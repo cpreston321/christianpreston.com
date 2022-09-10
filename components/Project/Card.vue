@@ -1,30 +1,21 @@
 <script lang="ts" setup>
 defineProps({
-  projects: {
-    type: Array,
-    default: [],
+  project: {
+    type: Object,
+    default: () => {},
   },
 });
-
-//if length is greater than 55 then add ... to the end of the string
-const truncate = (str: string, length: number) => {
-  if (str.length > length) {
-    return str.substring(0, length) + "...";
-  }
-  return str;
-};
 </script>
 
 <template>
   <div
-    class="flex flex-col justify-between w-full p-4 bg-opacity-70 bg-white dark:bg-[#1f1f1f] dark:bg-opacity-80! rounded-8 shadow-xl w-[350px] overflow-hidden"
-    v-for="project in projects"
-    :key="project.name"
+    class="flex flex-col justify-between w-full p-4 bg-opacity-70 bg-white rounded-8 shadow-xl w-[350px] dark:(bg-[#1f1f1f] bg-opacity-80!)"
   >
     <a class="h-46 md:h-48" :href="project.link" target="_blank">
       <img
-        class="relative w-full h-full object-cover object-top rounded-6"
+        class="relative w-full h-full object-(cover top) rounded-6"
         :src="`/projects/${project.preview}`"
+        :title="project.name"
         :alt="project.name"
       />
     </a>

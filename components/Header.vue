@@ -37,9 +37,9 @@ const links: object[] = [
         <li
           v-for="(link, idx) in links"
           :key="link.name"
-          class="py-2 px-2 md:px-4 self-center rounded-8 transition bg-transparent hover:bg-opacity-70 dark:hover:bg-opacity-80 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
+          class="py-2 px-2 md:px-4 self-center rounded-8 transition bg-transparent hover:bg-opacity-70 hover:bg-black hover:text-white dark:hover:(bg-opacity-80 bg-white text-black)"
           :class="{
-            'bg-opacity-70! dark:bg-opacity-70! dark:bg-white! bg-black! dark:text-black! text-white!':
+            'bg-opacity-70! bg-black! text-white! dark:(bg-opacity-70! bg-white! text-black!)':
               route.path === link.to,
             'ml-1': idx !== 0,
           }"
@@ -49,7 +49,7 @@ const links: object[] = [
           }}</NuxtLink>
         </li>
         <li
-          class="flex ml-1 p-2 self-center rounded-8 hover:bg-opacity-70 dark:hover:bg-opacity-80 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
+          class="flex ml-1 p-2 self-center rounded-8 hover:(bg-opacity-70 bg-black text-white) dark:hover:(bg-opacity-80 bg-white text-black)"
         >
           <button
             class="text-lg self-center"

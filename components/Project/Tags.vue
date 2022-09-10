@@ -42,7 +42,7 @@ const findIcon = (name) => {
     <div
       v-for="(tag, idx) in tags"
       :key="idx"
-      class="m-1 px-2 py-1 rounded-full text-xs! font-semibold shadow-md bg-opacity-40 bg-white dark:shadow-opacity-30 dark:bg-[#1f1f1f] dark:shadow! dark:shadow-white dark:bg-opacity-80! dark:bg-opacity-80!"
+      class="m-1 px-2 py-1 rounded-full text-xs! font-semibold shadow-md bg-opacity-40 bg-white dark:(shadow-opacity-30 bg-[#1f1f1f] shadow! shadow-white bg-opacity-80! bg-opacity-80!)"
     >
       <div class="flex flex-row">
         <span class="self-center">#</span>
