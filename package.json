@@ -9,14 +9,14 @@
   "devDependencies": {
     "@iconify-json/eva": "^1.1.2",
     "@iconify-json/ic": "^1.1.9",
-    "@iconify-json/logos": "^1.1.14",
-    "@nuxt/content": "^2.0.1",
-    "@nuxt/image-edge": "^1.0.0-27657146.da85542",
-    "@unocss/nuxt": "^0.45.13",
+    "@iconify-json/logos": "^1.1.15",
+    "@nuxt/content": "^2.1.0",
+    "@nuxt/image-edge": "^1.0.0-27718143.a3cd82c",
+    "@unocss/nuxt": "^0.45.21",
     "@vueuse/motion": "^2.0.0-beta.12",
-    "@vueuse/nuxt": "^9.1.1",
-    "nuxt": "^3.0.0-rc.9",
-    "nuxt-schema-org": "^1.1.0-beta.0"
+    "@vueuse/nuxt": "^9.2.0",
+    "nuxt": "npm:nuxt3@latest",
+    "nuxt-schema-org": "^1.1.0-beta.2"
   },
   "dependencies": {
     "@formkit/addons": "^1.0.0-beta.10",
