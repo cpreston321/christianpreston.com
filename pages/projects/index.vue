@@ -1,37 +1,16 @@
 <script lang="ts" setup>
-import { MotionVariants } from "@vueuse/motion";
+usePageMeta(
+  'Projects 🤩',
+  'These are my projects that I have worked on in past and present.'
+)
 
-const target = ref(null);
-const variants = ref<MotionVariants>({
-  initial: {
-    y: 100,
-    opacity: 0,
-  },
-  enter: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: 500,
-    },
-  },
-});
-useMotion(target, variants);
-
-const { data: projects } = await useAsyncData("projects", () =>
-  queryContent("/projects").find()
-);
-
-usePageMeta("Projects 🤩", "These are my projects that I have worked on.");
-definePageMeta({
-  pageTransition: {
-    name: "fade",
-    mode: "out-in",
-  },
-});
+const { data: projects } = await useAsyncData('projects', () =>
+  queryContent('/projects').find()
+)
 </script>
 
 <template>
-  <div ref="target" class="flex flex-col">
+  <div v-motion-pop-bottom class="flex flex-col">
     <div class="flex flex-row mb-4 md:mb-6">
       <NuxtLink
         class="self-center text-xl md:text-4xl hover:opacity-70 mr-3"

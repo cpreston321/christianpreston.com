@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-usePageMeta("404", "Page not found");
+usePageMeta('404', 'Page not found')
 </script>
 
 <template>
-  <div>
+  <div v-motion-pop-bottom>
     <div class="flex flex-row mb-4 md:mb-6">
       <NuxtLink
         to="/"
@@ -15,6 +15,8 @@ usePageMeta("404", "Page not found");
         404 😱
       </h1>
     </div>
-    <p class="text-lg">Page not found</p>
+    <p class="text-lg">
+      Page not found
+    </p>
   </div>
 </template>

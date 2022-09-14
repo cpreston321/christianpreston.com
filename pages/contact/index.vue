@@ -1,47 +1,47 @@
 <script lang="ts" setup>
-import { reset } from "@formkit/core";
+import { reset } from '@formkit/core'
 
-usePageMeta("Contact Form", "Contact me for any questions or inquiries.");
+usePageMeta('Contact Form', 'Contact me for any questions or inquiries.')
 
-const router = useRouter();
-const target = useAnimation();
+const router = useRouter()
 const payload = ref({
-  name: "",
-  email: "",
-  message: "",
-  bot_field: "",
-});
+  name: '',
+  email: '',
+  message: '',
+  bot_field: ''
+})
 
 const submit = async () => {
   try {
-    const data = await $fetch("/api/contact", {
-      method: "POST",
+    const data = await $fetch('/api/contact', {
+      method: 'POST',
       body: payload.value,
       headers: {
-        "Content-Type": "application/json",
-      },
-    });
+        'Content-Type': 'application/json'
+      }
+    })
 
     if (data.ok) {
-      reset("contact", {
-        name: "",
-        email: "",
-        message: "",
-        bot_field: "",
-      });
-      router.push("/contact/success");
+      reset('contact', {
+        name: '',
+        email: '',
+        message: '',
+        botField: ''
+      })
+      router.push('/contact/success')
     }
   } catch (error) {
-    console.error("Error submitting form", error);
+    // eslint-disable-next-line no-console
+    console.error('Error submitting form', error)
   }
-};
+}
 </script>
 
 <template>
-  <div ref="target">
+  <div v-motion-pop-bottom>
     <Title>Contact Me</Title>
-    <FormKit type="form" id="contact" @submit="submit" v-model="payload">
-      <FormKit name="bot_field" type="hidden" value="" />
+    <FormKit id="contact" v-model="payload" type="form" @submit="submit">
+      <FormKit name="botField" type="hidden" value="" />
       <FormKit
         label="Name"
         name="name"

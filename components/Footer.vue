@@ -12,7 +12,9 @@
         <div class="i-logos-nuxt-icon w-10" />
       </a>
     </div>
-    <div class="ml-1 mr-2 self-center">|</div>
+    <div class="ml-1 mr-2 self-center">
+      |
+    </div>
     <div class="self-center">
       &copy; Christian {{ new Date().getFullYear() }}. All rights reserved.
     </div>

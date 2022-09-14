@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-const target = useAnimation();
-usePageMeta("Home");
+usePageMeta('Home')
 </script>
 
 <template>
-  <div ref="target" class="flex flex-col">
+  <div v-motion-pop-bottom class="flex flex-col">
     <NuxtImg
       class="w-45 md:w-30 rounded-36 mb-3 shadow"
       src="/profile_image.jpeg"

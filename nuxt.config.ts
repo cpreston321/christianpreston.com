@@ -1,15 +1,15 @@
-import { defineNuxtConfig } from "nuxt";
-import { transformerDirectives, transformerVariantGroup } from "unocss";
+import { transformerDirectives, transformerVariantGroup } from 'unocss'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   typescript: {
-    shim: false,
+    shim: false
   },
   runtimeConfig: {
-    discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL,
+    discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL
   },
-  css: ["@unocss/reset/tailwind.css", "@/assets/formkit.css"],
+  css: ['@unocss/reset/tailwind.css', '@/assets/formkit.css'],
+
   /**
    * Modules
    * @see https://modules.nuxtjs.org/?version=3.x
@@ -25,59 +25,82 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------
    */
   modules: [
-    "@nuxt/image-edge",
-    "@vueuse/nuxt",
-    "@unocss/nuxt",
-    "@formkit/nuxt",
-    "@nuxt/content",
-    "nuxt-schema-org",
+    '@nuxt/image-edge',
+    '@unocss/nuxt',
+    '@vueuse/nuxt',
+    '@vueuse/motion/nuxt',
+    '@formkit/nuxt',
+    '@nuxt/content',
+    'nuxt-schema-org'
   ],
-  pageTransition: {
-    name: "fade",
-    mode: "out-in",
+
+  app: {
+    pageTransition: {
+      name: 'fade',
+      mode: 'out-in'
+    }
   },
 
   /** Module Options */
   schemaOrg: {
-    canonicalHost: "https://christianpreston.com",
-    defaultLanguage: "en-US",
+    canonicalHost: 'https://christianpreston.com',
+    defaultLanguage: 'en-US'
   },
+
+  motion: {
+    directives: {
+      'pop-bottom': {
+        initial: {
+          y: 100,
+          opacity: 0
+        },
+        visible: {
+          y: 0,
+          opacity: 1,
+          transition: {
+            delay: 200
+          }
+        }
+      }
+    }
+  },
+
   unocss: {
     // presets
     uno: true,
     icons: {
-      scale: 1.2,
+      scale: 1.2
     },
     webFonts: {
       fonts: {
-        sans: "DM Sans",
-        serif: "DM Serif Display",
-        mono: "DM Mono",
-      },
+        sans: 'DM Sans',
+        serif: 'DM Serif Display',
+        mono: 'DM Mono'
+      }
     },
     typography: true,
     theme: {
       animation: {
         keyframes: {
-          blob: '{ 0%,100%{ transform: translate(0, 0) scale(1) } 25%{ transform: "translate(20px, -30px) scale(1.1)" } 50%{ transform: translate(0, 40px) scale(1) } 75%{ transform: translate(-30px, -25px) scale(0.9) }}',
+          blob: '{ 0%,100%{ transform: translate(0, 0) scale(1) } 25%{ transform: "translate(20px, -30px) scale(1.1)" } 50%{ transform: translate(0, 40px) scale(1) } 75%{ transform: translate(-30px, -25px) scale(0.9) }}'
         },
         durations: {
-          blob: "10s",
+          blob: '10s'
         },
         timingFns: {
-          blob: "cubic-bezier(0.25,0.1,0.25,1)",
+          blob: 'cubic-bezier(0.25,0.1,0.25,1)'
         },
         counts: {
-          blob: "infinite",
-        },
-      },
+          blob: 'infinite'
+        }
+      }
     },
 
     transformers: [
       transformerVariantGroup(),
       transformerDirectives({
-        enforce: "pre",
-      }),
-    ],
-  },
-});
+        enforce: 'pre'
+      })
+    ]
+  }
+})

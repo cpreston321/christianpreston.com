@@ -1,10 +1,11 @@
 <script lang="ts" setup>
-defineProps({
-  project: {
-    type: Object,
-    default: () => {},
-  },
-});
+interface ProjectCardProps {
+  project?: Record<string, any>
+}
+
+withDefaults(defineProps<ProjectCardProps>(), {
+  project: () => ({})
+})
 </script>
 
 <template>
@@ -21,7 +22,9 @@ defineProps({
     </a>
     <div class="px-2 mt-2 md:mt-3">
       <ProjectTags :tags="project.tags" />
-      <h3 class="font-bold text-2xl md:text-3xl mb-2">{{ project.title }}</h3>
+      <h3 class="font-bold text-2xl md:text-3xl mb-2">
+        {{ project.title }}
+      </h3>
       <p class="text-xs md:text-sm" :title="project.description">
         {{ project.description }}
       </p>

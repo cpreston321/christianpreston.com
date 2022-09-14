@@ -1,16 +1,15 @@
 <script lang="ts" setup>
-const target = useAnimation();
-usePageMeta("About Me", "This more about me and my life.");
+usePageMeta('About Me', 'This more about me and my life.')
 
-const myBirthday = ref(new Date(1998, 12, 29));
+const myBirthday = ref(new Date(1998, 12, 29))
 const myAge = computed(() => {
-  const diff = Math.abs(new Date().getTime() - myBirthday.value.getTime());
-  return Math.floor(diff / (1000 * 3600 * 24 * 365));
-});
+  const diff = Math.abs(new Date().getTime() - myBirthday.value.getTime())
+  return Math.floor(diff / (1000 * 3600 * 24 * 365))
+})
 </script>
 
 <template>
-  <div ref="target" class="flex flex-col">
+  <div v-motion-pop-bottom class="flex flex-col">
     <Title>About Me</Title>
     <img
       class="w-45 md:w-30 rounded-36 mb-6 shadow"
@@ -41,10 +40,14 @@ const myAge = computed(() => {
     </p>
     <p class="text-md md:text-xl mb-12">
       If you would like to contact me about business inquiries please feel free
-      to <NuxtLink class="underline" to="/contact">contact me</NuxtLink>.
+      to <NuxtLink class="underline" to="/contact">
+        contact me
+      </NuxtLink>.
     </p>
 
-    <h2 class="font-bold text-2xl sm:text-3xl mb-2">Social Links</h2>
+    <h2 class="font-bold text-2xl sm:text-3xl mb-2">
+      Social Links
+    </h2>
     <SocialLinks />
   </div>
 </template>

@@ -1,16 +1,15 @@
 <script lang="ts" setup>
-const router = useRouter();
+interface TitleProps {
+  hideBack?: boolean
+}
+withDefaults(defineProps<TitleProps>(), {
+  hideBack: false
+})
 
-defineProps({
-  hideBack: {
-    default: false,
-    type: Boolean,
-  },
-});
-
-const handleBack: any = () => {
-  return router.push("/");
-};
+const router = useRouter()
+const handleBack = () => {
+  return router.push('/')
+}
 </script>
 
 <template>

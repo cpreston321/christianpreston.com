@@ -3,6 +3,8 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "lint": "eslint --ext .js,.ts,.vue .",
+    "lint:fix": "eslint --fix --ext .ts,.vue .",
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
@@ -12,15 +14,21 @@
     "@iconify-json/logos": "^1.1.15",
     "@nuxt/content": "^2.1.0",
     "@nuxt/image-edge": "^1.0.0-27718143.a3cd82c",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "@typescript-eslint/parser": "^5.0.1",
     "@unocss/nuxt": "^0.45.21",
-    "@vueuse/motion": "^2.0.0-beta.12",
+    "@vueuse/motion": "^2.0.0-beta.22",
     "@vueuse/nuxt": "^9.2.0",
+    "eslint": "^8.7.0",
     "nuxt": "npm:nuxt3@latest",
-    "nuxt-schema-org": "^1.1.0-beta.2"
+    "nuxt-schema-org": "^1.1.0-beta.2",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.4",
+    "vue-eslint-parser": "^8.0.0"
   },
   "dependencies": {
-    "@formkit/addons": "^1.0.0-beta.10",
-    "@formkit/nuxt": "^1.0.0-beta.10",
+    "@formkit/addons": "^1.0.0-beta.11-1c50a05",
+    "@formkit/nuxt": "^1.0.0-beta.11-1c50a05",
     "discord.js": "^14.3.0",
     "ua-parser-js": "^1.0.2"
   }

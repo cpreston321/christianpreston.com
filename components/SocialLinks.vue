@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { socials } = useAppConfig();
+const { socials } = useAppConfig()
 </script>
 
 <template>
@@ -10,7 +10,7 @@ const { socials } = useAppConfig();
     <li
       v-for="social in socials"
       :key="social.name"
-      class="mr-3 p-2 shadow rounded-full hover:(opacity-80) dark:(bg-white shadow-none)"
+      class="mr-3 p-2 rounded-full shadow hover:(opacity-80) dark:(bg-white shadow-none)"
     >
       <a target="_blank" :href="social.url" :title="social.name">
         <div :class="`i-logos-${social.icon}`" />

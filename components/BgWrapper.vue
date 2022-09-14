@@ -1,22 +1,22 @@
 <script lang="ts" setup>
 const blobsPositions: string[] = [
-  "top-0 left-0",
-  "bottom-0 left-3/4",
-  "top-3/4 right-1/2",
-  "bottom-1/2 left-1/2",
-  "top-1/2 left-0",
-];
+  'top-0 left-0',
+  'bottom-0 left-3/4',
+  'top-3/4 right-1/2',
+  'bottom-1/2 left-1/2',
+  'top-1/2 left-0'
+]
 const blobBgColors: string[] = [
-  "bg-teal",
-  "bg-purple animate-delay-200",
-  "bg-blue",
-  "bg-pink animate-delay-400",
-  "bg-cyan animate-delay-400 w-45! h-15!",
-];
+  'bg-teal',
+  'bg-purple animate-delay-200',
+  'bg-blue',
+  'bg-pink animate-delay-400',
+  'bg-cyan animate-delay-400 w-45! h-15!'
+]
 
 const blobs: string[] = blobsPositions.map((position, index) => {
-  return `${position} ${blobBgColors[index]}`;
-});
+  return `${position} ${blobBgColors[index]}`
+})
 </script>
 
 <template>

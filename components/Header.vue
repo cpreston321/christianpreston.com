@@ -1,27 +1,27 @@
 <script lang="ts" setup>
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
 
-const route = useRoute();
+const route = useRoute()
 
 const links: object[] = [
   {
-    name: "Home",
-    to: "/",
+    name: 'Home',
+    to: '/'
   },
   {
-    name: "Projects",
-    to: "/projects",
+    name: 'Projects',
+    to: '/projects'
   },
   {
-    name: "About",
-    to: "/about",
+    name: 'About',
+    to: '/about'
   },
   {
-    name: "Contact",
-    to: "/contact",
-  },
-];
+    name: 'Contact',
+    to: '/contact'
+  }
+]
 </script>
 
 <template>
@@ -44,9 +44,11 @@ const links: object[] = [
             'ml-1': idx !== 0,
           }"
         >
-          <NuxtLink class="rounded py-1" :to="link.to">{{
-            link.name
-          }}</NuxtLink>
+          <NuxtLink class="rounded py-1" :to="link.to">
+            {{
+              link.name
+            }}
+          </NuxtLink>
         </li>
         <li
           class="flex ml-1 p-2 self-center rounded-8 hover:(bg-opacity-70 bg-black text-white) dark:hover:(bg-opacity-80 bg-white text-black)"

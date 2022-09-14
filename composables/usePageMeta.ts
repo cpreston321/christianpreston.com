@@ -15,47 +15,47 @@ export const usePageMeta = (
   desc?: string,
   image?: string
 ): any => {
-  const config = useAppConfig();
+  const config = useAppConfig()
 
   const {
     site: { name, twitter, url: siteUrl, image: siteImage, description },
-    umami: { uri: umamiUri, websiteId },
-  } = config;
+    umami: { uri: umamiUri, websiteId }
+  } = config
 
-  desc = desc || description;
-  image = image || siteImage;
+  desc = desc || description
+  image = image || siteImage
 
   return useHead({
     title,
-    titleTemplate: `Portfolio - %s`,
+    titleTemplate: 'Portfolio - %s',
     meta: [
-      { name: "description", content: desc },
-      { name: "og:title", content: title },
-      { name: "og:site_name", content: name },
-      { name: "og:description", content: desc },
-      { name: "og:type", content: "website" },
-      { name: "og:url", content: siteUrl },
-      { name: "og:image", content: image },
+      { name: 'description', content: desc },
+      { name: 'og:title', content: title },
+      { name: 'og:site_name', content: name },
+      { name: 'og:description', content: desc },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: siteUrl },
+      { name: 'og:image', content: image },
 
       /** Twitter Section */
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: twitter },
-      { name: "twitter:creator", content: twitter },
-      { name: "twitter:title", content: name },
-      { name: "twitter:description", content: desc },
-      { name: "twitter:image", content: image },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: twitter },
+      { name: 'twitter:creator', content: twitter },
+      { name: 'twitter:title', content: name },
+      { name: 'twitter:description', content: desc },
+      { name: 'twitter:image', content: image }
     ],
-    link: [{ rel: "icon", type: "image/jpeg", href: "/favicon.jpeg" }],
+    link: [{ rel: 'icon', type: 'image/jpeg', href: '/favicon.jpeg' }],
     script: !process.dev
       ? [
           {
             src: umamiUri,
-            "data-website-id": websiteId,
-            "data-domains": "christianpreston.com",
+            'data-website-id': websiteId,
+            'data-domains': 'christianpreston.com',
             async: true,
-            defer: true,
-          },
+            defer: true
+          }
         ]
-      : [],
-  });
-};
+      : []
+  })
+}
