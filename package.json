@@ -12,7 +12,7 @@
     "@iconify-json/eva": "^1.1.2",
     "@iconify-json/ic": "^1.1.9",
     "@iconify-json/logos": "^1.1.15",
-    "@nuxt/content": "^2.1.0",
+    "@nuxt/content": "^2.1.1",
     "@nuxt/image-edge": "^1.0.0-27718143.a3cd82c",
     "@nuxtjs/eslint-config-typescript": "latest",
     "@typescript-eslint/parser": "^5.0.1",
