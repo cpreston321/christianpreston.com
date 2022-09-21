@@ -611,12 +611,12 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@nuxt/content@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@nuxt/content/-/content-2.1.0.tgz#19268c631906b41c20087b1096edf23cd52cca32"
-  integrity sha512-lnkTf8yzGfHGanTPdFWtWHQadF535pCkMhJ2q3XA37JyBc7evEPbM9vgKEKIBN6YNmdTqjtEZNn11Gy4Pni7tw==
+"@nuxt/content@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/content/-/content-2.1.1.tgz#b3ebed4ad14c49bbc84f748e6bfd6413c8e800ec"
+  integrity sha512-yYjmPmG9FRl6/vDQNobbHZlr0LNe9cP5PJcz4WfQN/alOAQaym0NRhlhZTkMe6Qb6yVjycE5IH2zU1f+o98c6g==
   dependencies:
-    "@nuxt/kit" "^3.0.0-rc.9"
+    "@nuxt/kit" "^3.0.0-rc.10"
     consola "^2.15.3"
     defu "^6.1.0"
     destr "^1.1.1"
@@ -625,7 +625,7 @@
     json5 "^2.2.1"
     knitwork "^0.1.2"
     listhen "^0.2.15"
-    mdast-util-to-hast "^12.2.1"
+    mdast-util-to-hast "^12.2.2"
     mdurl "^1.0.1"
     ohash "^0.1.5"
     pathe "^0.3.7"
@@ -4589,7 +4589,7 @@ mdast-util-gfm@^2.0.0:
     mdast-util-gfm-task-list-item "^1.0.0"
     mdast-util-to-markdown "^1.0.0"
 
-mdast-util-to-hast@^12.1.0, mdast-util-to-hast@^12.2.1:
+mdast-util-to-hast@^12.1.0, mdast-util-to-hast@^12.2.2:
   version "12.2.2"
   resolved "https://registry.yarnpkg.com/mdast-util-to-hast/-/mdast-util-to-hast-12.2.2.tgz#2bd8cf985a67c90c181eadcfdd8d31b8798ed9a1"
   integrity sha512-lVkUttV9wqmdXFtEBXKcepvU/zfwbhjbkM5rxrquLW55dS1DfOrnAXCk5mg1be1sfY/WfMmayGy1NsbK1GLCYQ==
