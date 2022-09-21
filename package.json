@@ -24,7 +24,7 @@
     "nuxt-schema-org": "^1.1.0-beta.3",
     "prettier": "^2.5.1",
     "typescript": "^4.4.4",
-    "vue-eslint-parser": "^8.0.0"
+    "vue-eslint-parser": "^9.1.0"
   },
   "dependencies": {
     "@formkit/addons": "^1.0.0-beta.11-1c50a05",
