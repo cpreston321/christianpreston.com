@@ -14,7 +14,7 @@ usePageMeta('Home')
     </h1>
     <p class="text-md md:text-xl">
       Software Engineer, Gamer & Technology Enthusiast. Currently I live in
-      <strong>Indianapolis, Indiana</strong>. I'am currently open for any
+      <strong>Indianapolis, Indiana</strong>. I'm currently open for any
       freelance jobs.
     </p>
     <SocialLinks />
