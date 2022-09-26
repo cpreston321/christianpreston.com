@@ -19,7 +19,7 @@
     "@unocss/nuxt": "^0.45.22",
     "@vueuse/motion": "^2.0.0-beta.22",
     "@vueuse/nuxt": "^9.2.0",
-    "eslint": "^8.7.0",
+    "eslint": "^8.24.0",
     "nuxt": "npm:nuxt3@latest",
     "nuxt-schema-org": "^1.1.0-beta.3",
     "prettier": "^2.5.1",
