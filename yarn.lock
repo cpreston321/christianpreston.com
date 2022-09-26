@@ -1567,18 +1567,18 @@
     local-pkg "^0.4.2"
     vue-demi "*"
 
-"@vueuse/schema-org-vite@1.1.0-beta.3":
-  version "1.1.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@vueuse/schema-org-vite/-/schema-org-vite-1.1.0-beta.3.tgz#e60f6c8fdb7783c335e529044ac7d03cc97d0e18"
-  integrity sha512-Y4yC9PZVoPM6/as9dDbe+kKX6+hZC0Zcn5j9kMBCH3qITFso6Dhdx+8QRIUkvAmrhBWPfC9Iinr+gSXvIcLpfA==
+"@vueuse/schema-org-vite@1.1.0-beta.4":
+  version "1.1.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@vueuse/schema-org-vite/-/schema-org-vite-1.1.0-beta.4.tgz#c7d83a5cc34e811c713a271a057cfd6c2fd9cd4b"
+  integrity sha512-67u2e1uCOK7J1GmffGAn6m7b4bkzA9cGRVXibp+OS1vfXuikth95B1tSk9cI7HNDfL36lA7WsEPzMMFeDH8u0A==
   dependencies:
-    "@vueuse/schema-org" "1.1.0-beta.3"
+    "@vueuse/schema-org" "1.1.0-beta.4"
     schema-dts "^1.1.0"
 
-"@vueuse/schema-org@1.1.0-beta.3":
-  version "1.1.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@vueuse/schema-org/-/schema-org-1.1.0-beta.3.tgz#991bfd9d2de2723397deed5cfef1661e6573fdc7"
-  integrity sha512-YAu6sQcHYLjxUO5FSZ9kpTxRY2ju0HPLdbJxY85L5Ivo8Gkz3xG+nyTSAMg/lehxNocd7+ykVeQCmi+NzgyXYg==
+"@vueuse/schema-org@1.1.0-beta.4":
+  version "1.1.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@vueuse/schema-org/-/schema-org-1.1.0-beta.4.tgz#489578418e3dc5cf2f01cac150a5d832c5f56742"
+  integrity sha512-OtJ80SrSC3KSslex0Ke+w48slycW001qIQ8SfmOS97cdkO16QGn8Sp61ZlnRAHCAcNJXU+Z8f8LS3v3w3qtewg==
   dependencies:
     "@rollup/pluginutils" "^4.2.1"
     magic-string "^0.26.2"
@@ -5298,14 +5298,14 @@ nth-check@^2.0.1:
   optionalDependencies:
     fsevents "~2.3.2"
 
-nuxt-schema-org@^1.1.0-beta.3:
-  version "1.1.0-beta.3"
-  resolved "https://registry.yarnpkg.com/nuxt-schema-org/-/nuxt-schema-org-1.1.0-beta.3.tgz#7569613b47ee58d073a032aeca6a8d2c467eaba0"
-  integrity sha512-Zdd/2+c6zIdGk+9cKTRm24WDt+Cn3R+2hBmWoy9jhtdwA/nc+DBegDzzpAluOuI0j8CyO6aFCfmoIEuZhX06oQ==
+nuxt-schema-org@^1.1.0-beta.4:
+  version "1.1.0-beta.4"
+  resolved "https://registry.yarnpkg.com/nuxt-schema-org/-/nuxt-schema-org-1.1.0-beta.4.tgz#416808fa5e5cf0bb0e618ca06ead4fa0f24bb2a5"
+  integrity sha512-bih5FRVIPHX2lS4a2+6g61F4npiX6DGf3FThZWvIVgjcx7tltIFk+UVIeWvyVF3tjzn9qhRhh0qSNyFZTzuoyA==
   dependencies:
     "@nuxt/kit" "3.0.0-rc.9"
-    "@vueuse/schema-org" "1.1.0-beta.3"
-    "@vueuse/schema-org-vite" "1.1.0-beta.3"
+    "@vueuse/schema-org" "1.1.0-beta.4"
+    "@vueuse/schema-org-vite" "1.1.0-beta.4"
     pathe "^0.3.7"
     schema-org-graph-js "0.5.1"
 
