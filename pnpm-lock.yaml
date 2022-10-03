@@ -1386,7 +1386,7 @@ packages:
     version: 3.7.4
     dependencies:
       '@types/eslint': registry.npmjs.org/@types/eslint/8.4.6
-      '@types/estree': registry.npmjs.org/@types/estree/1.0.0
+      '@types/estree': registry.npmjs.org/@types/estree/0.0.51
     dev: true
 
   registry.npmjs.org/@types/eslint/8.4.6:
@@ -1394,7 +1394,7 @@ packages:
     name: '@types/eslint'
     version: 8.4.6
     dependencies:
-      '@types/estree': registry.npmjs.org/@types/estree/1.0.0
+      '@types/estree': registry.npmjs.org/@types/estree/0.0.51
       '@types/json-schema': registry.npmjs.org/@types/json-schema/7.0.11
     dev: true
 
