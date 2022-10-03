@@ -1,3 +1,4 @@
 .output
 .nuxt
 node_modules
+package.json

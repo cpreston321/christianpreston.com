@@ -12,10 +12,14 @@ withDefaults(defineProps<ProjectCardProps>(), {
   <div
     class="flex flex-col justify-between w-full p-4 bg-opacity-70 bg-white rounded-8 shadow-xl w-[350px] dark:(bg-[#1f1f1f] bg-opacity-80!)"
   >
-    <a class="h-46 md:h-48" :href="project.link" target="_blank">
+    <a class="h-46 md:h-50" :href="project.link" target="_blank">
       <NuxtImg
-        class="relative w-full h-full object-(cover top) rounded-6"
-        :src="`/projects/${project.preview}`"
+        class="relative w-full h-full object-(cover top) rounded-3"
+        :src="
+          project.preview.includes('https')
+            ? project.preview
+            : `/projects/${project.preview}`
+        "
         :title="project.name"
         :alt="project.name"
       />

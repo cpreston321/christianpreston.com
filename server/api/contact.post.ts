@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
     const { name, email, message, botField } = body
 
     if (!discordWebhookUrl) {
-      throw new Error('No discord webhook url found')
+      throw new Error('Failed to send message: Discord webhook URL is not set.')
     } else if (botField !== '' || agent.browser.name === '') {
       throw new Error('Invalid contact form submission')
     }
@@ -58,6 +58,9 @@ export default defineEventHandler(async (event) => {
       message: 'Message failed to send'
     }
   } catch (error) {
+    // 400 Bad Request
+    event.res.statusCode = 400
+
     return {
       ok: false,
       message: error.message

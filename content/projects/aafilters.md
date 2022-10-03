@@ -1,5 +1,6 @@
 ---
 title: AAFilters
+category: Websites
 description: E-commerce site that sells water and air filters. Originally built on PEARL then fully re-written in PHP/HTML.
 icon: aafilters/icon.png
 logo: aafilters/logo.png

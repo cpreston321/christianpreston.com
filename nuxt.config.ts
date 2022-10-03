@@ -102,5 +102,9 @@ export default defineNuxtConfig({
         enforce: 'pre'
       })
     ]
+  },
+
+  image: {
+    domains: ['github.com']
   }
 })

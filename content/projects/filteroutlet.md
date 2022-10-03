@@ -1,5 +1,6 @@
 ---
 title: FilterOutlet
+category: Websites
 description: E-commerce site that sells water and air filters that was fully re-written with a modern feel and look.
 icon: filteroutlet/icon.png
 logo: filteroutlet/logo.png

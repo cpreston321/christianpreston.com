@@ -1,35 +1,43 @@
 {
+  "name": "christianpreston",
+  "description": "My Portfolio site built with Nuxt 3",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cpreston321/christianpreston.com"
+  },
   "scripts": {
-    "build": "nuxt build",
+    "build": "nuxt --dotenv ./env.production build",
     "dev": "nuxt dev",
     "lint": "eslint --ext .js,.ts,.vue .",
     "lint:fix": "eslint --fix --ext .ts,.vue .",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "generate": "nuxt --dotenv ./configs/.env.production generate",
+    "preview": "nuxt --dotenv ./.env.production preview"
   },
   "devDependencies": {
     "@iconify-json/eva": "^1.1.2",
     "@iconify-json/ic": "^1.1.9",
-    "@iconify-json/logos": "^1.1.15",
+    "@iconify-json/logos": "^1.1.16",
+    "@iconify-json/vscode-icons": "^1.1.13",
     "@nuxt/content": "^2.1.1",
     "@nuxt/image-edge": "^1.0.0-27719579.87dcdf2",
     "@nuxtjs/eslint-config-typescript": "latest",
-    "@typescript-eslint/parser": "^5.0.1",
-    "@unocss/nuxt": "^0.45.22",
-    "@vueuse/motion": "^2.0.0-beta.22",
-    "@vueuse/nuxt": "^9.2.0",
-    "eslint": "^8.7.0",
+    "@typescript-eslint/parser": "^5.38.1",
+    "@unocss/nuxt": "^0.45.26",
+    "@vueuse/motion": "^2.0.0-beta.23",
+    "@vueuse/nuxt": "^9.3.0",
+    "eslint": "^8.24.0",
     "nuxt": "npm:nuxt3@latest",
-    "nuxt-schema-org": "^1.1.0-beta.3",
-    "prettier": "^2.5.1",
-    "typescript": "^4.4.4",
-    "vue-eslint-parser": "^8.0.0"
+    "nuxt-schema-org": "^1.1.0-beta.4",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4",
+    "vue-eslint-parser": "^9.1.0"
   },
   "dependencies": {
-    "@formkit/addons": "^1.0.0-beta.11-1c50a05",
-    "@formkit/nuxt": "^1.0.0-beta.11-1c50a05",
-    "discord.js": "^14.3.0",
+    "@formkit/nuxt": "1.0.0-beta.11",
+    "@formkit/addons": "1.0.0-beta.11",
+    "discord.js": "^14.5.0",
     "ua-parser-js": "^1.0.2"
-  }
+  },
+  "packageManager": "pnpm@7.12.2"
 }

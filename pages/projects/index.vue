@@ -4,30 +4,45 @@ usePageMeta(
   'These are my projects that I have worked on in past and present.'
 )
 
+const page = ref(1)
+const el = ref<HTMLElement>(null)
+const pageLimit = computed(() => page.value * 12)
+
 const { data: projects } = await useAsyncData('projects', () =>
-  queryContent('/projects').find()
+  queryContent('/projects')
+    .sort({
+      title: 1
+    })
+    .limit(pageLimit.value)
+    .find()
 )
+
+// useInfiniteScroll(
+//   el,
+//   () => {
+//     if (projects.value.length < pageLimit.value) {
+//       return
+//     }
+
+//     page.value++
+//   },
+//   { distance: 10 }
+// )
 </script>
 
 <template>
   <div v-motion-pop-bottom class="flex flex-col">
-    <div class="flex flex-row mb-4 md:mb-6">
-      <NuxtLink
-        class="self-center text-xl md:text-4xl hover:opacity-70 mr-3"
-        to="/"
-      >
-        <div class="i-eva-arrow-back-fill" />
-      </NuxtLink>
-      <h1 class="self-center font-bold text-3xl sm:text-5xl md:text-6xl">
-        Projects
-      </h1>
-    </div>
+    <Title>Projects</Title>
     <!-- <input
       class="px-4 py-2 rounded-8 mb-3"
       type="text"
       placeholder="Search through my projects"
     /> -->
-    <div v-if="projects.length" class="grid grid-cols sm:grid-cols-2 gap-4">
+    <div
+      v-if="projects.length"
+      ref="el"
+      class="grid grid-cols sm:grid-cols-2 gap-4"
+    >
       <ProjectCard
         v-for="project in projects"
         :key="project.name"

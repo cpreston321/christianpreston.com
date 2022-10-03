@@ -1,5 +1,6 @@
 ---
 title: Atlanticus
+category: Websites
 description: A organization that wanted a full re-design in wordpress using Timber framework, plus data migration.
 icon: atlanticus/icon.png
 logo: atlanticus/logo.png

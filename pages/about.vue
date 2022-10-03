@@ -11,7 +11,7 @@ const myAge = computed(() => {
 <template>
   <div v-motion-pop-bottom class="flex flex-col">
     <Title>About Me</Title>
-    <img
+    <NuxtImg
       class="w-45 md:w-30 rounded-36 mb-6 shadow"
       src="/profile_image.jpeg"
       alt="Profile"

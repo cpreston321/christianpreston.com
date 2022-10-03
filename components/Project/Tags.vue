@@ -12,6 +12,8 @@ const tagNameIconsMap = [
   [['html', 'html5'], 'i-logos-html-5', null],
   [['vue', 'vue2', 'vue3'], 'i-logos-vue', '#2c3e50'],
   [['nuxt', 'nuxt3'], 'i-logos-nuxt-icon', null],
+  [['typescript', 'ts'], 'i-logos-typescript-icon', null],
+  [['vscode'], 'i-vscode-icons-file-type-vscode', null],
   [['bootstrap'], 'i-logos-bootstrap', null],
   [['wordpress'], 'i-logos-wordpress-icon', null],
   [['tailwind', 'tailwindcss'], 'i-logos-tailwindcss-icon', '#0078ae'],
