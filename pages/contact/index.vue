@@ -3,30 +3,24 @@ import { reset } from '@formkit/core'
 
 usePageMeta('Contact Form', 'Contact me for any questions or inquiries.')
 
+const token = ref()
 const router = useRouter()
-const payload = ref({
-  name: '',
-  email: '',
-  message: '',
-  bot_field: ''
-})
 
-const submit = async () => {
+const submit = async (data) => {
   try {
-    const data = await $fetch('/api/contact', {
+    const response = await $fetch('/api/contact', {
       method: 'POST',
-      body: payload.value,
+      body: { token, ...data },
       headers: {
         'Content-Type': 'application/json'
       }
     })
 
-    if (data.ok) {
+    if (response.ok) {
       reset('contact', {
         name: '',
         email: '',
-        message: '',
-        botField: ''
+        message: ''
       })
       router.push('/contact/success')
     }
@@ -40,8 +34,7 @@ const submit = async () => {
 <template>
   <div v-motion-pop-bottom>
     <Title>Contact Me</Title>
-    <FormKit id="contact" v-model="payload" type="form" @submit="submit">
-      <FormKit name="botField" type="hidden" value="" />
+    <FormKit id="contact" type="form" @submit="submit">
       <FormKit
         label="Name"
         name="name"
@@ -64,6 +57,7 @@ const submit = async () => {
         placeholder="Enter your message to Christian..."
         validation="required"
       />
+      <Turnstile class="mb-6" v-model="token" :options="{ action: 'vue' }" />
     </FormKit>
   </div>
 </template>
