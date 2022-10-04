@@ -10,7 +10,7 @@ const submit = async (data) => {
   try {
     const response = await $fetch('/api/contact', {
       method: 'POST',
-      body: { token, ...data },
+      body: { token: token.value, ...data },
       headers: {
         'Content-Type': 'application/json'
       }
