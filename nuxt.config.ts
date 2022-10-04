@@ -5,10 +5,13 @@ export default defineNuxtConfig({
   typescript: {
     shim: false
   },
-  runtimeConfig: {
-    discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL
-  },
   css: ['@unocss/reset/tailwind.css', '@/assets/formkit.css'],
+  runtimeConfig: {
+    discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL,
+    turnstile: {
+      secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY,
+    },
+  },
 
   /**
    * Modules
@@ -29,6 +32,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@vueuse/nuxt',
     '@vueuse/motion/nuxt',
+    'nuxt-turnstile',
     '@formkit/nuxt',
     '@nuxt/content',
     'nuxt-schema-org'
@@ -45,6 +49,10 @@ export default defineNuxtConfig({
   schemaOrg: {
     canonicalHost: 'https://christianpreston.com',
     defaultLanguage: 'en-US'
+  },
+
+  turnstile: {
+    siteKey: '1x00000000000000000000AA',
   },
 
   motion: {

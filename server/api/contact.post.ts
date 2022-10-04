@@ -2,68 +2,74 @@ import { EmbedBuilder, WebhookClient, APIMessage } from 'discord.js'
 import parserUa from 'ua-parser-js'
 
 export default defineEventHandler(async (event) => {
-  try {
-    const headers = getRequestHeaders(event)
-    const agent = parserUa(headers['user-agent'])
-    const body = await useBody(event)
-    const config = useRuntimeConfig()
+  const headers = getRequestHeaders(event)
+  const agent = parserUa(headers['user-agent'])
+  const body = await readBody(event)
+  const config = useRuntimeConfig()
 
-    const { discordWebhookUrl } = config
-    const { name, email, message, botField } = body
+  const { discordWebhookUrl } = config
+  const { token, name, email, message } = body
 
-    if (!discordWebhookUrl) {
-      throw new Error('Failed to send message: Discord webhook URL is not set.')
-    } else if (botField !== '' || agent.browser.name === '') {
-      throw new Error('Invalid contact form submission')
-    }
+  const verify = await verifyTurnstileToken(token || body['cf-turnstile-response'])
 
-    const webhookClient = new WebhookClient({ url: discordWebhookUrl })
-    const embed = new EmbedBuilder()
-      .setTitle('Website - Contact Form')
-      .setColor(0x00FFFF)
-      // To Ensure the message is somehow a bot then I will know through user agent.
-      .setDescription(
+  if (!discordWebhookUrl) {
+    // 500 Internal Server Error
+    throw createError({
+      statusCode: 500,
+      statusMessage: 'Discord webhook URL is not configured'
+    })
+  }
+
+  if (!verify.success && process.env.NODE_ENV !== 'development') {
+    // 403 Forbidden
+    throw createError({
+      statusCode: 403,
+      statusMessage: 'Turnstile token is invalid'
+    })
+  }
+
+  const webhookClient = new WebhookClient({ url: discordWebhookUrl })
+  const embed = new EmbedBuilder()
+    .setTitle('Website - Contact Form')
+    .setColor(0x00FFFF)
+  // To Ensure the message is somehow a bot then I will know through user agent.
+    .setDescription(
         `--------\n**Browser:** ${agent.browser.name} ${agent.browser.version}\n\n**OS:** ${agent.os.name}\n--------`
-      )
-      .addFields([
-        {
-          name: 'Name',
-          value: name
-        },
-        {
-          name: 'Email',
-          value: email
-        },
-        {
-          name: 'Message',
-          value: message
-        }
-      ])
-
-    const status = (await webhookClient.send({
-      username: 'FormBot',
-      avatarURL: 'https://christianpreston.com/favicon.jpeg',
-      embeds: [embed]
-    })) as APIMessage
-
-    if (status?.id) {
-      return {
-        ok: true,
-        message: 'Message sent successfully'
+    )
+    .addFields([
+      {
+        name: 'Cloudflare Verified',
+        value: verify.success ? '✅' : '❌',
+      },
+      {
+        name: 'Name',
+        value: name
+      },
+      {
+        name: 'Email',
+        value: email
+      },
+      {
+        name: 'Message',
+        value: message
       }
-    }
+    ])
 
-    return {
-      ok: false,
-      message: 'Message failed to send'
-    }
-  } catch (error) {
-    // 400 Bad Request
-    event.res.statusCode = 400
+  const status = (await webhookClient.send({
+    username: 'FormBot',
+    avatarURL: 'https://christianpreston.com/favicon.jpeg',
+    embeds: [embed]
+  })) as APIMessage
 
-    return {
-      ok: false,
-      message: error.message
-    }
+  if (!status?.id) {
+    throw createError({
+      statusCode: 500,
+      statusMessage: 'Message failed to send'
+    })
+  }
+
+  return {
+    ok: true,
+    message: 'Message sent successfully'
   }
 })
