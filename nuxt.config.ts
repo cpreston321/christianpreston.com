@@ -9,8 +9,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL,
     turnstile: {
-      secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY,
-    },
+      secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY
+    }
   },
 
   /**
@@ -32,17 +32,16 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@vueuse/nuxt',
     '@vueuse/motion/nuxt',
+    'nuxt-umami',
     'nuxt-turnstile',
     '@formkit/nuxt',
     '@nuxt/content',
     'nuxt-schema-org'
   ],
 
-  app: {
-    pageTransition: {
-      name: 'fade',
-      mode: 'out-in'
-    }
+  pageTransition: {
+    name: 'fade',
+    mode: 'out-in'
   },
 
   /** Module Options */
@@ -52,7 +51,12 @@ export default defineNuxtConfig({
   },
 
   turnstile: {
-    siteKey: '1x00000000000000000000AA',
+    siteKey: '1x00000000000000000000AA'
+  },
+
+  umami: {
+    websiteId: '4b153b23-68da-4146-9e6b-ad0062fd0249',
+    scriptUrl: 'https://analytics.christianpreston.com/umami.js'
   },
 
   motion: {

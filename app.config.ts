@@ -23,9 +23,5 @@ export default defineAppConfig({
     image: 'https://christianpreston.com/site_card.png',
     description:
       'Christian is a self-taught Software Developer from Indianapolis, IN. I enjoy collaborating, building, contributing, and learning new things.'
-  },
-  umami: {
-    uri: 'https://analytics.christianpreston.com/umami.js',
-    websiteId: '4b153b23-68da-4146-9e6b-ad0062fd0249'
   }
 })

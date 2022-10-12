@@ -18,8 +18,7 @@ export const usePageMeta = (
   const config = useAppConfig()
 
   const {
-    site: { name, twitter, url: siteUrl, image: siteImage, description },
-    umami: { uri: umamiUri, websiteId }
+    site: { name, twitter, url: siteUrl, image: siteImage, description }
   } = config
 
   desc = desc || description
@@ -27,7 +26,6 @@ export const usePageMeta = (
 
   return useHead({
     title,
-    titleTemplate: 'Portfolio - %s',
     meta: [
       { name: 'description', content: desc },
       { name: 'og:title', content: title },
@@ -44,18 +42,6 @@ export const usePageMeta = (
       { name: 'twitter:title', content: name },
       { name: 'twitter:description', content: desc },
       { name: 'twitter:image', content: image }
-    ],
-    link: [{ rel: 'icon', type: 'image/jpeg', href: '/favicon.jpeg' }],
-    script: !process.dev
-      ? [
-          {
-            src: umamiUri,
-            'data-website-id': websiteId,
-            'data-domains': 'christianpreston.com',
-            async: true,
-            defer: true
-          }
-        ]
-      : []
+    ]
   })
 }

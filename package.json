@@ -30,6 +30,7 @@
     "nuxt": "npm:nuxt3@latest",
     "nuxt-schema-org": "^1.1.0-beta.4",
     "nuxt-turnstile": "^0.0.7",
+    "nuxt-umami": "^1.0.2",
     "prettier": "^2.7.1",
     "typescript": "^4.8.4",
     "vue-eslint-parser": "^9.1.0"

@@ -8,6 +8,11 @@ const cords = computed(() => {
     y: y.value - scrollY.value - 30
   }
 })
+
+useHead({
+  titleTemplate: 'Portfolio - %s',
+  link: [{ rel: 'icon', type: 'image/jpeg', href: '/favicon.jpeg' }]
+})
 </script>
 
 <template>
@@ -16,6 +21,7 @@ const cords = computed(() => {
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
+
     <Blob
       class="w-15! h-15! bg-teal animate-none fixed z-9 opacity-90 blur-lg"
       :style="{ top: `${cords.y}px`, left: `${cords.x}px` }"
@@ -24,8 +30,8 @@ const cords = computed(() => {
     <!-- Header -->
     <Header />
 
+    <!-- Main Content -->
     <BgWrapper>
-      <!-- Main Content -->
       <slot />
     </BgWrapper>
 
