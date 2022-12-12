@@ -28,7 +28,7 @@
     "@vueuse/nuxt": "^9.3.0",
     "eslint": "^8.24.0",
     "nuxt": "npm:nuxt3@latest",
-    "nuxt-schema-org": "^1.1.0-beta.4",
+    "nuxt-schema-org": "^2.0.1",
     "nuxt-turnstile": "^0.0.7",
     "nuxt-umami": "^1.0.2",
     "prettier": "^2.7.1",
