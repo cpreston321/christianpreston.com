@@ -23,7 +23,7 @@
     "@nuxt/image-edge": "^1.0.0-27719579.87dcdf2",
     "@nuxtjs/eslint-config-typescript": "latest",
     "@typescript-eslint/parser": "^5.38.1",
-    "@unocss/nuxt": "^0.45.26",
+    "@unocss/nuxt": "^0.48.3",
     "@vueuse/motion": "^2.0.0-beta.23",
     "@vueuse/nuxt": "^9.3.0",
     "eslint": "^8.24.0",
