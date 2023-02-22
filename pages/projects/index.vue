@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-usePageMeta(
-  'Projects 🤩',
-  'These are my projects that I have worked on in past and present.'
-)
+useSeoMeta({
+  title: 'Projects',
+  description: 'These are some of my projects that I have worked on in past and present.'
+})
 
 const page = ref(1)
-const el = ref<HTMLElement>(null)
+const el = ref<HTMLElement>()
 const pageLimit = computed(() => page.value * 12)
 
 const { data: projects } = await useAsyncData('projects', () =>
@@ -32,14 +32,14 @@ const { data: projects } = await useAsyncData('projects', () =>
 
 <template>
   <div v-motion-pop-bottom class="flex flex-col">
-    <Title>Projects</Title>
+    <PageTitle>Projects</PageTitle>
     <!-- <input
       class="px-4 py-2 rounded-8 mb-3"
       type="text"
       placeholder="Search through my projects"
     /> -->
     <div
-      v-if="projects.length"
+      v-if="projects?.length"
       ref="el"
       class="grid grid-cols sm:grid-cols-2 gap-4"
     >

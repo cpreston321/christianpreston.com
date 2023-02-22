@@ -12,14 +12,9 @@ withDefaults(defineProps<ProjectCardProps>(), {
   <div
     class="flex flex-col justify-between w-full p-4 bg-opacity-70 bg-white rounded-8 shadow-xl w-[350px] dark:(bg-[#1f1f1f] bg-opacity-80!)"
   >
-    <a class="h-46 md:h-50" :href="project.link" target="_blank">
-      <NuxtImg
-        class="relative w-full h-full object-(cover top) rounded-3"
-        :src="
-          project.preview.includes('https')
-            ? project.preview
-            : `/projects/${project.preview}`
-        "
+    <a class="h-46 md:h-55 overflow-hidden rounded-3" :href="project.link" target="_blank">
+      <NuxtPicture
+        :src="project.preview"
         :title="project.name"
         :alt="project.name"
       />
@@ -38,7 +33,7 @@ withDefaults(defineProps<ProjectCardProps>(), {
         class="text-lg flex flex-row mt-2 justify-flex-end hover:opacity-75"
         :title="project.title"
       >
-        <div class="i-eva-external-link-fill"></div>
+        <IconCSS name="eva:external-link-fill" />
       </a>
     </div>
   </div>

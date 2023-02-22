@@ -1,5 +1,8 @@
 <script lang="ts" setup>
-usePageMeta('404', 'Page not found')
+useSeoMeta({
+  title: '404',
+  description: 'Page not found'
+})
 </script>
 
 <template>
@@ -9,7 +12,7 @@ usePageMeta('404', 'Page not found')
         to="/"
         class="self-center text-xl md:text-4xl hover:opacity-70 mr-3"
       >
-        <div class="i-eva-arrow-back-fill" />
+        <IconCSS name="eva:arrow-back-fill" />
       </NuxtLink>
       <h1 class="self-center font-bold text-3xl sm:text-5xl md:text-6xl">
         404 😱

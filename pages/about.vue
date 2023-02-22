@@ -1,5 +1,8 @@
 <script lang="ts" setup>
-usePageMeta('About Me', 'This more about me and my life.')
+useSeoMeta({
+  title: 'About Me',
+  description: 'Learn more about me and my work!'
+})
 
 const myBirthday = ref(new Date(1998, 12, 29))
 const myAge = computed(() => {
@@ -10,43 +13,58 @@ const myAge = computed(() => {
 
 <template>
   <div v-motion-pop-bottom class="flex flex-col">
-    <Title>About Me</Title>
-    <NuxtImg
-      class="w-45 md:w-30 rounded-36 mb-6 shadow"
-      src="/profile_image.jpeg"
-      alt="Profile"
-    />
+    <PageTitle>About Me</PageTitle>
     <p class="text-md md:text-xl mb-3">
-      I currently work a
-      <span class="font-medium font-italic">Software Engineer</span> at
-      <strong>
-        <a
-          class="hover:opacity-75 underline"
-          target="_blank"
-          href="https://www.linkedin.com/company/veritone-inc-/"
-          title="Veritone"
-        >
-          Veritone
-        </a>
-        💼
-      </strong>
-      .
+      I currently work at
+      <a
+        class="hover:opacity-75 font-bold"
+        target="_blank"
+        href="https://www.linkedin.com/company/veritone-inc-/"
+        title="Veritone"
+      >
+        Veritone
+      </a>
+      as a
+      <span class="font-medium font-italic">Software Engineer</span>.
     </p>
-    <p class="text-md md:text-xl mb-3">
-      I am {{ myAge }} years old. I have been programing since I was 13 and will
-      never stop 😎. In my free-time I like to contribute to open source
-      projects, play video games, invest into stocks. Always looking for new
-      ways to improve my skill set.
+    <p class="text-md md:text-xl mb-6">
+      I am {{ myAge }} years old, I have been programming since I was 13 and I don't think I will never stop 😎. In my free-time I like to contribute to open source projects, play video games and invest into stocks. Also not to mention I love drinking coffee 😛.
     </p>
-    <p class="text-md md:text-xl mb-12">
-      If you would like to contact me about business inquiries please feel free
+    <h5 class="text-2xl font-bold mb-2">
+      Fun Facts
+    </h5>
+    <ul class="list-disc ml-6 mb-6 text-md md:text-xl space-y-2">
+      <li class="pl-1">
+        I bought my first 🏡 at 17 years old with my mom 💙.
+      </li>
+      <li class="pl-1">
+        I have a two 🐶's named <span class="font-bold">Rogue</span> and <span class="font-bold">Malibu</span>.
+      </li>
+      <li class="pl-1">
+        I still work full-time with my mentor that hired me back in high school ⏳.
+      </li>
+      <li class="pl-1">
+        I have been with the 💙 of my life since <span class="italic">sophmore</span> year of high school.
+      </li>
+      <li class="pl-1">
+        I still hangout with my best friend from elementary school (basically brothers) 🤙.
+      </li>
+    </ul>
+    <p class="text-md md:text-xl">
+    </p>
+    <p class="text-md md:text-xl mb-6">
+      Alright that's enough about me! if you would like to learn more about my
+      work please feel free to check out my
+      <NuxtLink class="underline" to="/projects">
+        projects
+      </NuxtLink>. Also If you would like to talk to me about some business inquiries please feel free
       to <NuxtLink class="underline" to="/contact">
         contact me
       </NuxtLink>.
     </p>
 
-    <h2 class="font-bold text-2xl sm:text-3xl mb-2">
-      Social Links
+    <h2 class="font-bold text-2xl sm:text-3xl">
+      Let's Connect
     </h2>
     <SocialLinks />
   </div>

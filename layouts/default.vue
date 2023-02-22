@@ -1,6 +1,8 @@
 <script lang="ts" setup>
-const { x, y } = useMouse()
 const { y: scrollY } = useWindowScroll()
+const { x, y } = useMouse({
+  touch: false
+})
 
 const cords = computed(() => {
   return {
@@ -8,36 +10,24 @@ const cords = computed(() => {
     y: y.value - scrollY.value - 30
   }
 })
-
-useHead({
-  titleTemplate: 'Portfolio - %s',
-  link: [{ rel: 'icon', type: 'image/jpeg', href: '/favicon.jpeg' }]
-})
 </script>
 
 <template>
-  <Html lang="en-US">
-    <Meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
+  <Blob
+    class="w-20! h-20! bg-teal animate-none fixed z-9 opacity-90 blur-xl"
+    :style="{ top: `${cords.y}px`, left: `${cords.x}px` }"
+  />
 
-    <Blob
-      class="w-15! h-15! bg-teal animate-none fixed z-9 opacity-90 blur-lg"
-      :style="{ top: `${cords.y}px`, left: `${cords.x}px` }"
-    />
+  <!-- Header -->
+  <Header />
 
-    <!-- Header -->
-    <Header />
+  <!-- Main Content -->
+  <BgWrapper>
+    <slot />
+  </BgWrapper>
 
-    <!-- Main Content -->
-    <BgWrapper>
-      <slot />
-    </BgWrapper>
-
-    <!-- Footer  -->
-    <Footer />
-  </Html>
+  <!-- Footer  -->
+  <Footer />
 </template>
 
 <style>

@@ -1,12 +1,21 @@
 <script lang="ts" setup>
 import { reset } from '@formkit/core'
 
-usePageMeta('Contact Form', 'Contact me for any questions or inquiries.')
+useSeoMeta({
+  title: 'Contact',
+  description: 'Contact me for any questions or inquiries.'
+})
 
 const token = ref()
 const router = useRouter()
 
-const submit = async (data) => {
+interface ContactForm {
+  name: string
+  email: string
+  message: string
+}
+
+const submit = async (data: ContactForm) => {
   try {
     const response = await $fetch('/api/contact', {
       method: 'POST',
@@ -33,7 +42,7 @@ const submit = async (data) => {
 
 <template>
   <div v-motion-pop-bottom>
-    <Title>Contact Me</Title>
+    <PageTitle>Contact Me</PageTitle>
     <FormKit id="contact" type="form" @submit="submit">
       <FormKit
         label="Name"
@@ -57,7 +66,7 @@ const submit = async (data) => {
         placeholder="Enter your message to Christian..."
         validation="required"
       />
-      <Turnstile class="mb-6" v-model="token" :options="{ action: 'vue' }" />
+      <Turnstile v-model="token" class="mb-6" :options="{ action: 'vue' }" />
     </FormKit>
   </div>
 </template>

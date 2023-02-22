@@ -21,7 +21,7 @@ const blobs: string[] = blobsPositions.map((position, index) => {
 
 <template>
   <main
-    class="-z-10 w-full min-h-screen flex justify-center bg-white transition duration-300 pt-24 pb-10 dark:(bg-[#1f1f1f] text-white)"
+    class="-z-10 w-full min-h-screen flex justify-center bg-white pt-24 pb-10 dark:(bg-[#1f1f1f] text-white)"
   >
     <div
       class="flex flex-col justify-center relative max-w-screen-lg w-full p-4 sm:p-6 md:p-8"

@@ -2,16 +2,35 @@ import { transformerDirectives, transformerVariantGroup } from 'unocss'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  typescript: {
-    shim: false
-  },
-  css: ['@unocss/reset/tailwind.css', '@/assets/formkit.css'],
+  css: ['@/assets/formkit.css'],
+
   runtimeConfig: {
     discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL,
-    turnstile: {
-      secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY
+    public: {
+      titleSeparator: '|',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://christianpreston.com',
+      siteName: 'Portfolio',
+      siteDescription: 'I am a self-taught Software Developer from Indianapolis, IN. I enjoy collaborating, building, contributing, and learning.',
+      language: 'en'
     }
   },
+
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/jpeg', href: '/favicon.jpeg' }
+      ],
+      viewport: 'width=device-width, initial-scale=1, viewport-fit=cover'
+    }
+  },
+
+  /**
+   * Nuxt SEO Kit Layer
+   * @see https://github.com/harlan-zw/nuxt-seo-kit
+   */
+  extends: [
+    'nuxt-seo-kit'
+  ],
 
   /**
    * Modules
@@ -28,34 +47,25 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------
    */
   modules: [
-    '@nuxt/image-edge',
+    'nuxt-icon',
+    '@nuxtjs/turnstile',
     '@unocss/nuxt',
+    '@nuxt/content',
+    '@nuxt/image-edge',
     '@vueuse/nuxt',
     '@vueuse/motion/nuxt',
-    'nuxt-umami',
-    'nuxt-turnstile',
     '@formkit/nuxt',
-    '@nuxt/content',
-    'nuxt-schema-org'
+    'nuxt-umami',
+    '@nuxtjs/color-mode'
   ],
 
-  pageTransition: {
-    name: 'fade',
-    mode: 'out-in'
-  },
-
   /** Module Options */
-  schemaOrg: {
-    canonicalHost: 'https://christianpreston.com',
-    defaultLanguage: 'en-US'
-  },
-
-  turnstile: {
-    siteKey: '1x00000000000000000000AA'
+  colorMode: {
+    classSuffix: ''
   },
 
   umami: {
-    websiteId: '4b153b23-68da-4146-9e6b-ad0062fd0249',
+    websiteId: process.env.UMAMI_WEBSITE_ID,
     scriptUrl: 'https://analytics.christianpreston.com/umami.js'
   },
 
@@ -66,7 +76,7 @@ export default defineNuxtConfig({
           y: 100,
           opacity: 0
         },
-        visible: {
+        enter: {
           y: 0,
           opacity: 1,
           transition: {
@@ -78,11 +88,8 @@ export default defineNuxtConfig({
   },
 
   unocss: {
-    // presets
     uno: true,
-    icons: {
-      scale: 1.2
-    },
+    preflight: true,
     webFonts: {
       fonts: {
         sans: 'DM Sans',
@@ -92,6 +99,7 @@ export default defineNuxtConfig({
     },
     typography: true,
     theme: {
+      darkMode: 'class',
       animation: {
         keyframes: {
           blob: '{ 0%,100%{ transform: translate(0, 0) scale(1) } 25%{ transform: "translate(20px, -30px) scale(1.1)" } 50%{ transform: translate(0, 40px) scale(1) } 75%{ transform: translate(-30px, -25px) scale(0.9) }}'

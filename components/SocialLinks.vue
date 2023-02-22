@@ -1,19 +1,25 @@
 <script lang="ts" setup>
 const { socials } = useAppConfig()
+
+const icons = ref(new Map([
+  ['github', 'logos:github-icon'],
+  ['twitter', 'logos:twitter'],
+  ['linkedin', 'logos-linkedin-icon']
+]))
+
+const icon = (name: string) => {
+  return icons.value.get(name)
+}
 </script>
 
 <template>
-  <!-- <div class="i-logos-github-icon"></div>
-  <div class="i-logos-twitter"></div>
-  <div class="i-logos-linkedin-icon"></div> -->
-  <ul v-if="socials.length > 0" class="flex flex-row my-3">
+  <ul v-if="Object.keys(socials).length > 0" class="flex flex-row mt-3 space-x-3">
     <li
-      v-for="social in socials"
-      :key="social.name"
-      class="mr-3 p-2 rounded-full shadow hover:(opacity-80) dark:(bg-white shadow-none)"
+      v-for="[key, url] of Object.entries(socials)"
+      :key="key"
     >
-      <a target="_blank" :href="social.url" :title="social.name">
-        <div :class="`i-logos-${social.icon}`" />
+      <a class="flex rounded-full w-8 h-8 justify-center items-center hover:(opacity-70) dark:(bg-white) text-lg" target="_blank" :href="url" :title="key">
+        <Icon :name="icon(key)" :class="{ 'dark:(text-black)': key === 'github'}" />
       </a>
     </li>
   </ul>

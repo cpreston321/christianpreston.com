@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-usePageMeta('Contact Form Success', 'Your message has been sent')
+useSeoMeta({
+  title: 'Contact Success',
+  description: 'Thank you for submitting your contact information. I will reply to you as soon as I can!'
+})
+
 const router = useRouter()
 const counter = useCountdown(10, () => {
   router.push('/')
@@ -8,7 +12,7 @@ const counter = useCountdown(10, () => {
 
 <template>
   <div v-motion-pop-bottom>
-    <Title>Success ✅</Title>
+    <PageTitle>Success ✅</PageTitle>
     <p class="text-lg">
       Thank you for submitting your contact information. I will reply to you as
       soon as I can!
