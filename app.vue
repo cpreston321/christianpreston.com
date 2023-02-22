@@ -1,4 +1,8 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useSeoMeta({
+  googleSiteVerification: 'Rar0M0gLALXwyv7ycuIFXRlG4e2Sly_RQNESdxZlgs'
+})
+</script>
 
 <template>
   <NuxtLayout>
