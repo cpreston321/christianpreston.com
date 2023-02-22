@@ -63,6 +63,10 @@ export default defineNuxtConfig({
   ],
 
   /** Module Options */
+  turnstile: {
+    siteKey: '1x00000000000000000000AA'
+  },
+
   colorMode: {
     classSuffix: ''
   },
