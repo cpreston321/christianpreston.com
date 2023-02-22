@@ -6,6 +6,9 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL,
+    turnstile: {
+      secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY || ''
+    },
     public: {
       titleSeparator: '|',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://christianpreston.com',
