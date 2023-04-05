@@ -5,9 +5,9 @@ useSeoMeta({
 })
 
 const router = useRouter()
-const counter = useCountdown(10, () => {
+const counter = useCountdown(() => {
   router.push('/')
-})
+}, 10)
 </script>
 
 <template>

@@ -5,19 +5,19 @@ import { Ref } from 'vue'
  *
  * @example
  * ```ts
- * useCountdown(5, () => {
+ * useCountdown(() => {
  *  console.log('Countdown is done!')
- * })
+ * }, 5)
  * ```
  *
- * @param timer {number} - The time in seconds
- * @param cb {function} - The callback function
+ * @param {function} cb - The callback function
+ * @param {number} timer - The time in seconds
  *
- * @returns `Ref<number>` countdown number
+ * @returns {Ref<number>} countdown number
  */
-export const useCountdown = (timer: number | undefined, cb: () => void): Ref<number> => {
-  const counter = ref(timer ?? 5)
-  const timeoutFn = ref(null)
+export const useCountdown = (cb: () => void, timer?: number): Ref<number> => {
+  const counter = ref(timer || 5)
+  const timeoutFn = ref<null | NodeJS.Timeout>(null)
 
   const countdown = () => {
     counter.value--
