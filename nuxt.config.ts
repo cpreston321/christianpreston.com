@@ -32,8 +32,16 @@ export default defineNuxtConfig({
    * @see https://github.com/harlan-zw/nuxt-seo-kit
    */
   extends: [
-    'nuxt-seo-kit'
+    'nuxt-seo-kit',
+    'nuxt-umami'
   ],
+
+  appConfig: {
+    umami: {
+      id: process.env.UMAMI_WEBSITE_ID,
+      host: 'https://analytics.christianpreston.com',
+    }
+  },
 
   /**
    * Modules
@@ -58,8 +66,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@vueuse/motion/nuxt',
     '@formkit/nuxt',
-    'nuxt-umami',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxthq/studio'
   ],
 
   /** Module Options */
@@ -69,11 +77,6 @@ export default defineNuxtConfig({
 
   colorMode: {
     classSuffix: ''
-  },
-
-  umami: {
-    websiteId: process.env.UMAMI_WEBSITE_ID,
-    scriptUrl: 'https://analytics.christianpreston.com/umami.js'
   },
 
   motion: {
