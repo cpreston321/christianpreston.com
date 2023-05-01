@@ -43,30 +43,32 @@ const submit = async (data: ContactForm) => {
 <template>
   <div v-motion-pop-bottom>
     <PageTitle>Contact Me</PageTitle>
-    <FormKit id="contact" type="form" @submit="submit">
-      <FormKit
-        label="Name"
-        name="name"
-        type="text"
-        placeholder="Enter your name"
-        validation="required"
-      />
-      <FormKit
-        label="Email"
-        name="email"
-        type="email"
-        placeholder="Enter your email"
-        validation="required|email"
-      />
-      <FormKit
-        type="textarea"
-        label="Message"
-        name="message"
-        rows="5"
-        placeholder="Enter your message to Christian..."
-        validation="required"
-      />
-      <Turnstile v-model="token" class="mb-6" :options="{ action: 'vue' }" />
-    </FormKit>
+    <div class="flex flex-col justify-between w-full p-6 ring ring-dark/10 bg-white/20 dark:(bg-white/10 ring-white/30) rounded-lg">
+      <FormKit id="contact" type="form" @submit="submit">
+        <FormKit
+          label="Name"
+          name="name"
+          type="text"
+          placeholder="Enter your name"
+          validation="required"
+        />
+        <FormKit
+          label="Email"
+          name="email"
+          type="email"
+          placeholder="Enter your email"
+          validation="required|email"
+        />
+        <FormKit
+          type="textarea"
+          label="Message"
+          name="message"
+          rows="5"
+          placeholder="Enter your message to Christian..."
+          validation="required"
+        />
+        <Turnstile v-model="token" class="mb-6" :options="{ action: 'vue' }" />
+      </FormKit>
+    </div>
   </div>
 </template>

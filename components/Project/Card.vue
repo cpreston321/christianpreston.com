@@ -10,9 +10,9 @@ withDefaults(defineProps<ProjectCardProps>(), {
 
 <template>
   <div
-    class="flex flex-col justify-between w-full p-4 bg-opacity-70 bg-white rounded-8 shadow-xl w-[350px] dark:(bg-[#1f1f1f] bg-opacity-80!)"
+    class="flex flex-col justify-between w-full ring p-4 ring-dark/10 bg-white/20 dark:(bg-white/10 ring-white/30) rounded-lg w-[350px]"
   >
-    <a class="h-46 md:h-55 overflow-hidden rounded-3" :href="project.link" target="_blank">
+    <a class="h-46 md:h-55 overflow-hidden rounded-lg" :href="project.link" target="_blank">
       <NuxtPicture
         :src="project.preview"
         :title="project.name"

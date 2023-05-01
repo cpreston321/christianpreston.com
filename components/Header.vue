@@ -46,16 +46,16 @@ const toggleTheme = () => {
         <NuxtImg v-if="colorMode.value === 'dark'" class="w-6" src="/logo-dark.png" alt="CP logo" />
         <NuxtImg v-else class="w-6" src="/logo.png" alt="CP logo" />
       </NuxtLink>
-      <nav class="flex flex-row justify-between rounded-8 shadow-xl p-.5 ring ring-black dark:ring-white">
+      <nav class="flex flex-row justify-between rounded-lg p-.5 ring ring-black/20 dark:ring-white/20">
         <ul class="flex justify-center text-xs md:text-md font-bold">
           <li
             v-for="(link, idx) in links"
             :key="link.name"
-            class="p-2 md:px-3 self-center rounded-8 hover:bg-opacity-70"
+            class="p-2 md:px-3 self-center rounded-lg transition-colors ease-in duration-200"
             :class="{
-              'bg-opacity-70 bg-black text-white dark:(bg-opacity-70 bg-white text-black)':
+              'bg-black/10 dark:(bg-white/20)':
                 route.path === link.to,
-              'bg-transparent hover:(bg-black text-white) dark:hover:(bg-opacity-80 bg-white text-black)': route.path !== link.to,
+              'hover:(bg-black/10) dark:hover:(bg-white/20)': route.path !== link.to,
               'ml-1': idx !== 0
             }"
           >
@@ -64,7 +64,7 @@ const toggleTheme = () => {
             </NuxtLink>
           </li>
           <li
-            class="ml-1 px-3 flex items-center h-full rounded-8 hover:(bg-opacity-70 bg-black text-white) dark:hover:(bg-opacity-80 bg-white text-black)"
+            class="ml-1 px-3 flex items-center h-full rounded-lg hover:(bg-black/10) dark:hover:(bg-white/30)"
           >
             <button
               class="flex items-center text-lg self-center"
