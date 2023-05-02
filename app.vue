@@ -23,10 +23,6 @@ const cords = computed(() => {
     :style="{ top: `${cords.y}px`, left: `${cords.x}px` }"
   />
 
-  <a class="fixed bottom-10 right-0 z-20" href="https://www.buymeacoffee.com/cpreston321">
-    <img class="w-[80%]" src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&slug=cpreston321&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" />
-  </a>
-
   <!-- Header -->
   <Header />
 
