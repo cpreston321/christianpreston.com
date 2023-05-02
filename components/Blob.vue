@@ -1,8 +1,6 @@
-<script lang="ts" setup></script>
-
 <template>
   <div
-    class="blur-blob animate-blob transition absolute -z-10 w-48 md:w-76 h-48 md:h-76 rounded-full opacity-60 mix-blend-hard-light filter blur-3xl"
+    class="blur-blob rounded-full absolute -z-10 w-30 md:w-76 h-40 md:h-64 opacity-70 blur-3xl"
   />
 </template>
 
