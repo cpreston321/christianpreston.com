@@ -17,9 +17,7 @@ useSeoMeta({
       Christian Preston
     </h1>
     <p class="text-md md:text-xl">
-      Software Engineer, Gamer & a Technology Enthusiast. Currently live in
-      <strong>Indianapolis, Indiana</strong>. I currently work full time but I'am open for any
-      freelance jobs.
+      I'm a Software Engineer, Gamer, Investor & Technology Enthusiast. I reside in <strong>Indianapolis, Indiana</strong> and am currently employed full-time, but I remain open to freelance opportunities.
     </p>
 
     <SocialLinks />
