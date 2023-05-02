@@ -13,7 +13,7 @@ export default defineNuxtConfig({
       titleSeparator: '|',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://christianpreston.com',
       siteName: 'Portfolio',
-      siteDescription: 'I am a self-taught Software Developer from Indianapolis, IN. I enjoy collaborating, building, contributing, and learning.',
+      siteDescription: 'I’m a self-taught software developer based in Indianapolis, IN, with a passion for collaboration, building, contributing, and continuous learning. Explore my portfolio and experience in web development, software engineering, and more.',
       language: 'en'
     }
   },
@@ -67,7 +67,8 @@ export default defineNuxtConfig({
     '@vueuse/motion/nuxt',
     '@formkit/nuxt',
     '@nuxtjs/color-mode',
-    '@nuxthq/studio'
+    '@nuxthq/studio',
+    '@nuxt/devtools',
   ],
 
   /** Module Options */
@@ -77,6 +78,13 @@ export default defineNuxtConfig({
 
   colorMode: {
     classSuffix: ''
+  },
+
+  ogImage: {
+    experimentalInlineWasm: true,
+    defaults: {
+      mask: '.nuxt-devtools-toggle'
+    }
   },
 
   motion: {

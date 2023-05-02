@@ -8,34 +8,28 @@ withDefaults(defineProps<TagsProps>(), {
 })
 
 const tagNameIconsMap = [
-  [['php'], 'i-logos-php-alt dark:text-white', '#0078ae'],
-  [['html', 'html5'], 'i-logos-html-5', null],
-  [['vue', 'vue2', 'vue3'], 'i-logos-vue', '#2c3e50'],
-  [['nuxt', 'nuxt3'], 'i-logos-nuxt-icon', null],
-  [['typescript', 'ts'], 'i-logos-typescript-icon', null],
-  [['vscode'], 'i-vscode-icons-file-type-vscode', null],
-  [['bootstrap'], 'i-logos-bootstrap', null],
-  [['wordpress'], 'i-logos-wordpress-icon', null],
-  [['tailwind', 'tailwindcss'], 'i-logos-tailwindcss-icon', '#0078ae'],
-  [['sass', 'scss'], 'i-logos-sass-icon', '#c0392b'],
-  [['less'], 'i-logos-less-icon', '#c0392b'],
-  [['css'], 'i-logos-css-icon', '#0078ae'],
-  [['javascript', 'js'], 'i-logos-javascript', '#f7df1e'],
-  [['react', 'reactjs'], 'i-logos-react-icon', '#0078ae'],
-  [['angular', 'angularjs'], 'i-logos-angular-icon', '#0078ae'],
-  [['node', 'nodejs'], 'i-logos-nodejs-icon', '#0078ae'],
-  [['express', 'expressjs'], 'i-logos-express-icon', '#0078ae'],
-  [['graphql'], 'i-logos-graphql-icon', '#0078ae'],
-  [['gatsby'], 'i-logos-gatsby-icon', '#0078ae'],
-  [['webpack', 'webpack4'], 'i-logos-webpack-icon', '#0078ae'],
-  [['svelte'], 'i-logos-svelte-icon', '#0078ae'],
-  [['vuepress'], 'i-logos-vuepress-icon', '#0078ae'],
-  [['netlify'], 'i-logos-netlify-icon', '#0078ae'],
-  [['firebase'], 'i-logos-firebase-icon', '#0078ae']
+  [['php'], 'logos:php-alt'],
+  [['html', 'html5'], 'logos:html-5'],
+  [['vue', 'vue2', 'vue3'], 'logos-vue'],
+  [['nuxt', 'nuxt3'], 'logos-nuxt-icon'],
+  [['typescript', 'ts'], 'logos:typescript-icon'],
+  [['vscode'], 'logos:visual-studio-code'],
+  [['bootstrap'], 'logos-bootstrap'],
+  [['wordpress'], 'logos-wordpress-icon'],
+  [['tailwind', 'tailwindcss', 'tw'], 'logos-tailwindcss-icon'],
+  [['sass', 'scss'], 'logos:sass'],
+  [['less'], 'logos:less'],
+  [['css'], 'logos:css-3'],
+  [['javascript', 'js'], 'logos:javascript'],
+  [['react', 'reactjs'], 'logos:react'],
+  [['angular', 'angularjs'], 'logos-angular-icon'],
+  [['node', 'nodejs'], 'logos-nodejs-icon'],
+  [['svelte'], 'logos-svelte-icon'],
 ]
 
-const findIcon = (name: string) => {
-  return tagNameIconsMap.find(([names]) => names.includes(name))
+const findIcon = (name: string): string => {
+  // @ts-ignore
+  return tagNameIconsMap.find(([names]) => names.includes(name))?.[1] ?? ''
 }
 </script>
 
@@ -44,15 +38,15 @@ const findIcon = (name: string) => {
     <div
       v-for="(tag, idx) in tags"
       :key="idx"
-      class="m-1 px-2 py-1 rounded-full text-xs! font-semibold shadow-md bg-opacity-40 bg-white dark:(shadow-opacity-30 bg-[#1f1f1f] shadow! shadow-white bg-opacity-80! bg-opacity-80!)"
+      class="m-1 px-2 py-1 rounded-lg text-xs font-semibold bg-dark/5 ring ring-dark/10 dark:(bg-white/10 ring-white/15)"
     >
       <div class="flex flex-row">
         <span class="self-center">#</span>
         <span class="self-center">{{ tag }}</span>
-        <i
+        <Icon
           v-if="findIcon(tag)"
           class="self-center mx-1"
-          :class="findIcon(tag)"
+          :name="findIcon(tag)"
         />
       </div>
     </div>

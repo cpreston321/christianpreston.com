@@ -6,11 +6,13 @@ useSeoMeta({
 
 <template>
   <div v-motion-pop-bottom class="flex flex-col">
-    <NuxtImg
-      class="w-45 md:w-30 rounded-lg mb-3 ring ring-black/20 dark:ring-white/20"
-      src="/profile_image.jpeg"
-      alt="Profile"
-    />
+    <NuxtLink to="/cp-resume.pdf" target="_blank">
+      <NuxtImg
+        class="w-45 md:w-30 rounded-lg mb-3 ring ring-black/20 dark:ring-white/20"
+        src="/profile_image.jpeg"
+        alt="Profile"
+      />
+    </NuxtLink>
     <h1 class="font-bold text-3xl sm:text-5xl md:text-6xl mb-2 md:mb-3">
       Christian Preston
     </h1>

@@ -1,5 +1,5 @@
-import { EmbedBuilder, WebhookClient, APIMessage } from 'discord.js'
 import parserUa from 'ua-parser-js'
+import { EmbedBuilder, WebhookClient, APIMessage } from 'discord.js'
 
 export default defineEventHandler(async (event) => {
   const headers = getRequestHeaders(event)

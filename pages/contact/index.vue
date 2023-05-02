@@ -2,11 +2,10 @@
 import { reset } from '@formkit/core'
 
 useSeoMeta({
-  title: 'Contact',
-  description: 'Contact me for any questions or inquiries.'
+  title: 'Contact me',
+  description: 'Have a question or inquiry? Don’t hesitate to reach out.'
 })
 
-const token = ref()
 const router = useRouter()
 
 interface ContactForm {
@@ -19,7 +18,7 @@ const submit = async (data: ContactForm) => {
   try {
     const response = await $fetch('/api/contact', {
       method: 'POST',
-      body: { token: token.value, ...data },
+      body: data,
       headers: {
         'Content-Type': 'application/json'
       }
@@ -67,7 +66,11 @@ const submit = async (data: ContactForm) => {
           placeholder="Enter your message to Christian..."
           validation="required"
         />
-        <Turnstile v-model="token" class="mb-6" :options="{ action: 'vue' }" />
+        <FormKit
+          type="turnstile"
+          name="token"
+          class="mb-6"
+        />
       </FormKit>
     </div>
   </div>
