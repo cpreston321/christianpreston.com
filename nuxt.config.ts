@@ -10,11 +10,10 @@ export default defineNuxtConfig({
       secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY || ''
     },
     public: {
-      titleSeparator: '|',
+      language: 'en-US',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://christianpreston.com',
-      siteName: 'Portfolio',
-      siteDescription: 'I’m a self-taught software developer based in Indianapolis, IN, with a passion for collaboration, building, contributing, and continuous learning. Explore my portfolio and experience in web development, software engineering, and more.',
-      language: 'en'
+      siteName: 'Christian Preston',
+      siteDescription: 'I’m a self-taught software developer based in Indianapolis, IN, with a passion for collaboration, building, contributing, and continuous learning. Explore my portfolio and experience in web development, software engineering, and more.'
     }
   },
 
@@ -40,6 +39,7 @@ export default defineNuxtConfig({
     umami: {
       id: process.env.UMAMI_WEBSITE_ID,
       host: 'https://analytics.christianpreston.com',
+      ignoreLocalhost: true
     }
   },
 
@@ -68,7 +68,7 @@ export default defineNuxtConfig({
     '@formkit/nuxt',
     '@nuxtjs/color-mode',
     '@nuxthq/studio',
-    '@nuxt/devtools',
+    '@nuxt/devtools'
   ],
 
   /** Module Options */
@@ -81,7 +81,7 @@ export default defineNuxtConfig({
   },
 
   ogImage: {
-    experimentalInlineWasm: true,
+    experimentalRuntimeBrowser: true,
     defaults: {
       mask: '.nuxt-devtools-toggle'
     }

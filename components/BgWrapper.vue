@@ -21,7 +21,7 @@ const blobs = blobsPositions.map((position, index) => {
 
 <template>
   <main
-    class="-z-10 w-full min-h-screen flex justify-center pt-24 pb-10"
+    class="-z-10 w-full min-h-screen flex justify-center pt-24 pb-16"
   >
     <div
       class="flex flex-col justify-center relative max-w-screen-lg w-full p-4 sm:p-6 md:p-8"
@@ -36,15 +36,12 @@ const blobs = blobsPositions.map((position, index) => {
 </template>
 
 <style lang="postcss" scoped>
-  html main {
+  main {
+    background-size: 40px 40px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' transform='scale(3)'%3E%3Crect width='100%25' height='100%25' fill='%23fff'/%3E%3Cpath fill='none' stroke='hsla(0, 0%25, 98%25, 1)' stroke-width='.2' d='M10 0v20ZM0 10h20Z'/%3E%3C/svg%3E");
   }
 
   html.dark main {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' transform='scale(3)'%3E%3Crect width='100%25' height='100%25' fill='hsl(0, 0%25, 8.5%25)'/%3E%3Cpath fill='none' stroke='hsl(0, 0%25, 11.0%25)' stroke-width='.2' d='M10 0v20ZM0 10h20Z'/%3E%3C/svg%3E");
-  }
-
-  main {
-    background-size: 40px 40px;
   }
 </style>

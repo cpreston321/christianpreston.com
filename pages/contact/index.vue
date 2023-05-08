@@ -2,7 +2,7 @@
 import { reset } from '@formkit/core'
 
 useSeoMeta({
-  title: 'Contact me',
+  title: 'Contact',
   description: 'Have a question or inquiry? Don’t hesitate to reach out.'
 })
 
