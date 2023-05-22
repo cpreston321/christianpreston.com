@@ -5,15 +5,18 @@ export default defineNuxtConfig({
   css: ['@/assets/formkit.css'],
 
   runtimeConfig: {
-    discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL,
+    discordWebhookUrl: '',
     turnstile: {
-      secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY || ''
+      secretKey: undefined
     },
     public: {
       language: 'en-US',
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://christianpreston.com',
+      siteUrl: 'https://christianpreston.com',
       siteName: 'Christian Preston',
-      siteDescription: 'I’m a self-taught software developer based in Indianapolis, IN, with a passion for collaboration, building, contributing, and continuous learning. Explore my portfolio and experience in web development, software engineering, and more.'
+      siteDescription: 'I’m a self-taught software developer based in Indianapolis, IN, with a passion for collaboration, building, contributing, and continuous learning. Explore my portfolio and experience in web development, software engineering, and more.',
+      turnstile: {
+        siteKey: '1x00000000000000000000AA'
+      }
     }
   },
 
@@ -21,8 +24,7 @@ export default defineNuxtConfig({
     head: {
       link: [
         { rel: 'icon', type: 'image/jpeg', href: '/favicon.jpeg' }
-      ],
-      viewport: 'width=device-width, initial-scale=1, viewport-fit=cover'
+      ]
     }
   },
 
@@ -37,9 +39,8 @@ export default defineNuxtConfig({
 
   appConfig: {
     umami: {
-      id: process.env.UMAMI_WEBSITE_ID,
-      host: 'https://analytics.christianpreston.com',
-      ignoreLocalhost: true
+      ignoreLocalhost: true,
+      version: 2
     }
   },
 
@@ -64,46 +65,40 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image-edge',
     '@vueuse/nuxt',
-    '@vueuse/motion/nuxt',
+    // '@vueuse/motion/nuxt',
     '@formkit/nuxt',
     '@nuxtjs/color-mode',
     '@nuxthq/studio',
     '@nuxt/devtools'
   ],
 
-  /** Module Options */
-  turnstile: {
-    siteKey: '1x00000000000000000000AA'
-  },
-
   colorMode: {
     classSuffix: ''
   },
 
   ogImage: {
-    experimentalRuntimeBrowser: true,
     defaults: {
       mask: '.nuxt-devtools-toggle'
     }
   },
 
-  motion: {
-    directives: {
-      'pop-bottom': {
-        initial: {
-          y: 100,
-          opacity: 0
-        },
-        enter: {
-          y: 0,
-          opacity: 1,
-          transition: {
-            delay: 200
-          }
-        }
-      }
-    }
-  },
+  // motion: {
+  //   directives: {
+  //     'pop-bottom': {
+  //       initial: {
+  //         y: 100,
+  //         opacity: 0
+  //       },
+  //       enter: {
+  //         y: 0,
+  //         opacity: 1,
+  //         transition: {
+  //           delay: 200
+  //         }
+  //       }
+  //     }
+  //   }
+  // },
 
   unocss: {
     uno: true,
@@ -143,6 +138,6 @@ export default defineNuxtConfig({
   },
 
   image: {
-    domains: ['github.com']
+    domains: ['github.com', 'buymeacoffee.com']
   }
 })

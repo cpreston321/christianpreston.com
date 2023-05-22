@@ -6,18 +6,18 @@ useSeoMeta({
 </script>
 
 <template>
-  <div v-motion-pop-bottom class="flex flex-col">
+  <div class="flex flex-col">
     <PageTitle>About Me</PageTitle>
     <div class="flex flex-col justify-between w-full p-6 ring ring-dark/10 bg-white/20 dark:(bg-white/10 ring-white/30) rounded-lg">
       <p class="text-md md:text-lg mb-3">
         I am currently employed as a Software Engineer at
         <a
-            class="hover:opacity-75 font-bold underline"
-            target="_blank"
-            href="https://www.linkedin.com/company/veritone-inc-/"
-            title="Veritone"
-          >
-            Veritone
+          class="hover:opacity-75 font-bold underline"
+          target="_blank"
+          href="https://www.linkedin.com/company/veritone-inc-/"
+          title="Veritone"
+        >
+          Veritone
         </a>. With over a decade of programming experience since the age of 13, I have developed a passion for software development that I anticipate will endure indefinitely. In my leisure time, I enjoy contributing to open source projects, gaming, and investing in stocks. Additionally, I am an avid coffee enthusiast.
       </p>
       <h5 class="text-2xl font-bold mb-2">

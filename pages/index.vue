@@ -5,13 +5,19 @@ useSeoMeta({
 </script>
 
 <template>
-  <div v-motion-pop-bottom class="flex flex-col">
+  <div class="flex flex-col">
     <div>
-      <NuxtLink to="/cp-resume.pdf" target="_blank">
+      <NuxtLink
+        to="/cp-resume.pdf"
+        target="_blank"
+        @click="umTrackEvent('home:btn:clicked', {
+          name: 'resume'
+        })"
+      >
         <NuxtImg
           class="w-45 md:w-30 rounded-lg mb-3 ring ring-black/20 dark:ring-white/20"
           src="/profile_image.jpeg"
-          alt="Profile"
+          alt="Profile Picture"
         />
       </NuxtLink>
     </div>
@@ -25,11 +31,23 @@ useSeoMeta({
     <SocialLinks />
 
     <div class="flex flex-row space-x-3 mt-6">
-      <NuxtLink class="group inline-flex transition duration-200 items-center space-x-3 px-3 py-2 rounded-lg text-md text-black font-medium ring ring-black/30 bg-black/2 dark:(ring-white/30 bg-white/10 text-white)" to="/projects">
+      <NuxtLink
+        class="group inline-flex transition duration-200 items-center space-x-3 px-3 py-2 rounded-lg text-md text-black font-medium ring ring-black/30 bg-black/2 dark:(ring-white/30 bg-white/10 text-white)"
+        to="/projects"
+        @click="umTrackEvent('home:btn:clicked', {
+          name: 'my-projects'
+        })"
+      >
         My Projects
         <Icon name="mdi:arrow-right" class="transition duration-200 translate-x-0 group-hover:translate-x-1 text-xl ml-1" />
       </NuxtLink>
-      <NuxtLink class="inline-flex items-center space-x-3 text-md font-medium hover:opacity-70" to="/about">
+      <NuxtLink
+        class="inline-flex items-center space-x-3 text-md font-medium hover:opacity-70"
+        to="/about"
+        @click="umTrackEvent('home:btn:clicked', {
+          name: 'about-me'
+        })"
+      >
         About Me
       </NuxtLink>
     </div>

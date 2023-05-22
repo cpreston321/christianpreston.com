@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const props = defineProps({
-  context: Object,
+  context: Object
 })
 
-function handleInput(token: string) {
+function handleInput (token: string) {
   props.context?.node.input(token)
 }
 </script>

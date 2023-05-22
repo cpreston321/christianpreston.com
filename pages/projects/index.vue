@@ -31,7 +31,7 @@ const { data: projects } = await useAsyncData('projects', () =>
 </script>
 
 <template>
-  <div v-motion-pop-bottom class="flex flex-col">
+  <div  class="flex flex-col">
     <PageTitle>Projects</PageTitle>
     <!-- <input
       class="px-4 py-2 rounded-8 mb-3"

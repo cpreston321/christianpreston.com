@@ -11,7 +11,7 @@ const counter = useCountdown(() => {
 </script>
 
 <template>
-  <div v-motion-pop-bottom>
+  <div>
     <PageTitle>Success ✅</PageTitle>
     <p class="text-lg">
       Thank you for submitting your contact information. I will reply to you as

@@ -12,7 +12,16 @@ withDefaults(defineProps<ProjectCardProps>(), {
   <div
     class="flex flex-col w-full ring ring-dark/10 bg-white/20 dark:(bg-white/10 ring-white/30) rounded-lg w-[350px]"
   >
-    <a class="h-46 md:h-55 overflow-hidden rounded-t-lg" :href="project.link" target="_blank">
+    <a
+      class="h-46 md:h-55 overflow-hidden rounded-t-lg"
+      :href="project.link"
+      target="_blank"
+      @click="umTrackEvent(`project:clicked`, {
+        name: project.name,
+        title: project.title,
+        link: project.link
+      })"
+    >
       <NuxtPicture
         :src="project.preview"
         :title="project.name"
@@ -32,6 +41,11 @@ withDefaults(defineProps<ProjectCardProps>(), {
         target="_blank"
         class="text-lg flex flex-row mt-3 justify-flex-end hover:opacity-75"
         :title="project.title"
+        @click="umTrackEvent(`project:clicked`, {
+          name: project.name,
+          title: project.title,
+          link: project.link
+        })"
       >
         <IconCSS name="eva:external-link-fill" />
       </a>

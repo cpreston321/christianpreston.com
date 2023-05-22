@@ -40,7 +40,7 @@ const submit = async (data: ContactForm) => {
 </script>
 
 <template>
-  <div v-motion-pop-bottom>
+  <div>
     <PageTitle>Contact Me</PageTitle>
     <div class="flex flex-col justify-between w-full p-6 ring ring-dark/10 bg-white/20 dark:(bg-white/10 ring-white/30) rounded-lg">
       <FormKit id="contact" type="form" @submit="submit">
