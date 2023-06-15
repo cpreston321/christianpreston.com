@@ -6,7 +6,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <Motion class="flex flex-col" :preset="'popBottom'">
     <PageTitle>About Me</PageTitle>
     <div class="flex flex-col justify-between w-full p-6 ring ring-dark/10 bg-white/20 dark:(bg-white/10 ring-white/30) rounded-lg">
       <p class="text-md md:text-lg mb-3">
@@ -58,5 +58,5 @@ useSeoMeta({
       </h2>
       <SocialLinks />
     </div>
-  </div>
+  </Motion>
 </template>
