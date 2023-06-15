@@ -65,7 +65,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image-edge',
     '@vueuse/nuxt',
-    '@vueuse/motion/nuxt',
+    // '@vueuse/motion/nuxt',
     '@formkit/nuxt',
     '@nuxtjs/color-mode',
     '@nuxthq/studio',
@@ -82,23 +82,23 @@ export default defineNuxtConfig({
     }
   },
 
-  motion: {
-    directives: {
-      'pop-bottom': {
-        initial: {
-          y: 100,
-          opacity: 0
-        },
-        enter: {
-          y: 0,
-          opacity: 1,
-          transition: {
-            delay: 200
-          }
-        }
-      }
-    }
-  },
+  // motion: {
+  //   directives: {
+  //     'pop-bottom': {
+  //       initial: {
+  //         y: 100,
+  //         opacity: 0
+  //       },
+  //       enter: {
+  //         y: 0,
+  //         opacity: 1,
+  //         transition: {
+  //           delay: 200
+  //         }
+  //       }
+  //     }
+  //   }
+  // },
 
   unocss: {
     uno: true,
