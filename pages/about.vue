@@ -40,8 +40,7 @@ useSeoMeta({
           I still hangout with my best friend from elementary school (basically brothers) 🤙.
         </li>
       </ul>
-      <p class="text-md md:text-lg">
-      </p>
+
       <p class="text-md md:text-lg mb-6">
         Alright that's enough about me! if you would like to learn more about my
         work please feel free to check out my

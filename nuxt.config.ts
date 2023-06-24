@@ -2,6 +2,8 @@ import { transformerDirectives, transformerVariantGroup } from 'unocss'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  devtools: true,
+
   css: ['@/assets/formkit.css'],
 
   runtimeConfig: {
@@ -68,8 +70,7 @@ export default defineNuxtConfig({
     // '@vueuse/motion/nuxt',
     '@formkit/nuxt',
     '@nuxtjs/color-mode',
-    '@nuxthq/studio',
-    '@nuxt/devtools'
+    '@nuxthq/studio'
   ],
 
   colorMode: {
