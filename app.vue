@@ -3,15 +3,15 @@ useSeoMeta({
   googleSiteVerification: 'sRar0M0gLALXwyv7ycuIFXRlG4e2Sly_RQNESdxZlgs'
 })
 
-const { y: scrollY } = useWindowScroll()
 const { x, y } = useMouse({
-  touch: false
+  touch: false,
+  type: 'client'
 })
 
 const cords = computed(() => {
   return {
-    x: x.value - 30,
-    y: y.value - scrollY.value - 30
+    x: x.value - 40,
+    y: y.value - 40
   }
 })
 </script>
@@ -39,6 +39,11 @@ const cords = computed(() => {
 
   <!-- Footer  -->
   <Footer />
+
+  <!-- CMD+K -->
+  <ClientOnly>
+    <CmdK />
+  </ClientOnly>
 </template>
 
 <style lang="postcss">

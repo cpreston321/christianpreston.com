@@ -122,7 +122,7 @@ export default defineNuxtConfig({
           blob: '10s'
         },
         timingFns: {
-          blob: 'cubic-bezier(0.25,0.1,0.25,1)'
+          blob: 'ease-in-out'
         },
         counts: {
           blob: 'infinite'
