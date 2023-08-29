@@ -1059,8 +1059,8 @@ packages:
       '@hapi/hoek': 9.3.0
     dev: true
 
-  /@humanwhocodes/config-array@0.11.10:
-    resolution: {integrity: sha512-KVVjQmNUepDVGXNuoRRdmmEjruj0KfiGSbS8LVc12LMsWDQzRXJ0qdhN8L8uUigKpfEHRhlaQFY0ib1tnUbNeQ==}
+  /@humanwhocodes/config-array@0.11.11:
+    resolution: {integrity: sha512-N2brEuAadi0CcdeMXUkhbZB84eskAc8MEX1By6qEchoVywSgXPIjou4rYsl0V3Hj0ZnuGycGCjdNgockbzeWNA==}
     engines: {node: '>=10.10.0'}
     dependencies:
       '@humanwhocodes/object-schema': 1.2.1
@@ -1841,6 +1841,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     dev: true
     bundledDependencies:
       - napi-wasm
@@ -2088,8 +2089,8 @@ packages:
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
     dev: true
 
-  /@sigstore/bundle@2.0.0:
-    resolution: {integrity: sha512-EO7D7/kMtUsYn596WP+b5N/txWTgOt7N8vsZ2gyneMsxfrPW4FJHRZtMlZeGKCgBNCcjZhZ8ItyawkZqJC8XiA==}
+  /@sigstore/bundle@2.1.0:
+    resolution: {integrity: sha512-89uOo6yh/oxaU8AeOUnVrTdVMcGk9Q1hJa7Hkvalc6G3Z3CupWk4Xe9djSgJm9fMkH69s0P0cVHUoKSOemLdng==}
     engines: {node: ^16.14.0 || >=18.0.0}
     dependencies:
       '@sigstore/protobuf-specs': 0.2.1
@@ -2100,17 +2101,17 @@ packages:
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dev: true
 
-  /@sigstore/sign@2.0.0:
-    resolution: {integrity: sha512-f+r1jEDwM5969DTORRln9sDmWjTy1cOQzhU/iisGNzFdbF2TglmwNScbH6aiQ6QH4lc3jOXNMgKP6sec1kSVKA==}
+  /@sigstore/sign@2.1.0:
+    resolution: {integrity: sha512-4VRpfJxs+8eLqzLVrZngVNExVA/zAhVbi4UT4zmtLi4xRd7vz5qie834OgkrGsLlLB1B2nz/3wUxT1XAUBe8gw==}
     engines: {node: ^16.14.0 || >=18.0.0}
     dependencies:
-      '@sigstore/bundle': 2.0.0
+      '@sigstore/bundle': 2.1.0
       '@sigstore/protobuf-specs': 0.2.1
       make-fetch-happen: 13.0.0
     dev: true
 
-  /@sigstore/tuf@2.0.0:
-    resolution: {integrity: sha512-Ow/ZMFH9kdHbMNOH//rDuINblqufpqD+e3xS9JY5RRce+euh9eUsjSc6jodioMMi2roN9rSAk8LCuyW2hngAKw==}
+  /@sigstore/tuf@2.1.0:
+    resolution: {integrity: sha512-BUoVCx+7Wj+8moEGvUU2MyBI+f93lmg1CLmoG6KrhQMeDyAG8HAZNk+YRCNuvwvSDCfPhwsj37Bg63/Q+bnGsw==}
     engines: {node: ^16.14.0 || >=18.0.0}
     dependencies:
       '@sigstore/protobuf-specs': 0.2.1
@@ -3467,7 +3468,7 @@ packages:
     dependencies:
       browserslist: 4.21.10
       caniuse-lite: 1.0.30001524
-      fraction.js: 4.2.1
+      fraction.js: 4.3.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
       postcss: 8.4.28
@@ -5094,7 +5095,7 @@ packages:
       '@eslint-community/regexpp': 4.8.0
       '@eslint/eslintrc': 2.1.2
       '@eslint/js': 8.48.0
-      '@humanwhocodes/config-array': 0.11.10
+      '@humanwhocodes/config-array': 0.11.11
       '@humanwhocodes/module-importer': 1.0.1
       '@nodelib/fs.walk': 1.2.8
       ajv: 6.12.6
@@ -5441,8 +5442,8 @@ packages:
       fetch-blob: 3.2.0
     dev: true
 
-  /fraction.js@4.2.1:
-    resolution: {integrity: sha512-/KxoyCnPM0GwYI4NN0Iag38Tqt+od3/mLuguepLgCAKPn0ZhC544nssAW0tG2/00zXEYl9W+7hwAIpLHo6Oc7Q==}
+  /fraction.js@4.3.0:
+    resolution: {integrity: sha512-btalnXjFelOv2cy86KzHWhUuMb622/AD8ce/MCH9C36xe7QRXjJZA+19fP+G5LT0fdRcbOHErMI3SPM11ZaVDg==}
     dev: true
 
   /framesync@6.1.2:
@@ -5784,7 +5785,7 @@ packages:
       cookie-es: 1.0.0
       defu: 6.1.2
       destr: 2.0.1
-      iron-webcrypto: 0.8.0
+      iron-webcrypto: 0.8.2
       radix3: 1.1.0
       ufo: 1.3.0
       uncrypto: 0.1.3
@@ -6157,8 +6158,8 @@ packages:
     dev: true
     optional: true
 
-  /iron-webcrypto@0.8.0:
-    resolution: {integrity: sha512-gScdcWHjTGclCU15CIv2r069NoQrys1UeUFFfaO1hL++ytLHkVw7N5nXJmFf3J2LEDMz1PkrvC0m62JEeu1axQ==}
+  /iron-webcrypto@0.8.2:
+    resolution: {integrity: sha512-jGiwmpgTuF19Vt4hn3+AzaVFGpVZt7A1ysd5ivFel2r4aNVFwqaYa6aU6qsF1PM7b+WFivZHz3nipwUOXaOnHg==}
     dev: true
 
   /is-absolute-url@4.0.1:
@@ -7766,6 +7767,10 @@ packages:
     dev: true
     optional: true
 
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
+    dev: true
+
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
@@ -8582,7 +8587,7 @@ packages:
       promise-retry: 2.0.1
       read-package-json: 7.0.0
       read-package-json-fast: 3.0.2
-      sigstore: 2.0.0
+      sigstore: 2.1.0
       ssri: 10.0.5
       tar: 6.1.15
     transitivePeerDependencies:
@@ -9787,14 +9792,14 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /sigstore@2.0.0:
-    resolution: {integrity: sha512-RtTi90xIdzFmQAAKb9+Ki1nx4IR2Z5c+mFn3dN0xuPHgk3gTt3f7ZqKsZ9UFQP40ZAlm7un8LMyjhwgrTIXNPA==}
+  /sigstore@2.1.0:
+    resolution: {integrity: sha512-kPIj+ZLkyI3QaM0qX8V/nSsweYND3W448pwkDgS6CQ74MfhEkIR8ToK5Iyx46KJYRjseVcD3Rp9zAmUAj6ZjPw==}
     engines: {node: ^16.14.0 || >=18.0.0}
     dependencies:
-      '@sigstore/bundle': 2.0.0
+      '@sigstore/bundle': 2.1.0
       '@sigstore/protobuf-specs': 0.2.1
-      '@sigstore/sign': 2.0.0
-      '@sigstore/tuf': 2.0.0
+      '@sigstore/sign': 2.1.0
+      '@sigstore/tuf': 2.1.0
     transitivePeerDependencies:
       - supports-color
     dev: true
