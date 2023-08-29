@@ -6,8 +6,9 @@ useSeoMeta({
 
 <template>
   <div class="flex flex-col">
-    <div>
+    <div class="flex">
       <NuxtLink
+        class="block"
         to="/cp-resume.pdf"
         target="_blank"
         @click="umTrackEvent('home:btn:clicked', {

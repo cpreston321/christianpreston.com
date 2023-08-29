@@ -1,7 +1,7 @@
 ---
 title: FilterOutlet
 category: Websites
-description: E-commerce site that sells water and air filters that was fully re-written with a modern feel and look.
+description: FilterOutlet was an e-commerce platform designed to test out a new design. Its purpose was to evaluate new features and ideas before implementing them on the main site.
 icon: /projects/filteroutlet/icon.png
 logo: /projects/filteroutlet/logo.png
 preview: /projects/filteroutlet/preview.png

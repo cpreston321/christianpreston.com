@@ -18,14 +18,14 @@ useSeoMeta({
           title="Veritone"
         >
           Veritone
-        </a>. With over a decade of programming experience since the age of 13, I have developed a passion for software development that I anticipate will endure indefinitely. In my leisure time, I enjoy contributing to open source projects, gaming, and investing in stocks. Additionally, I am an avid coffee enthusiast.
+        </a>. With over a decade of programming experience since the age of 13, I have developed a passion for software development that I anticipate will endure indefinitely. In my leisure time, I enjoy contributing to open-source projects, gaming, and investing in stocks. Additionally, I am an avid coffee enthusiast.
       </p>
       <h5 class="text-2xl font-bold mb-2">
-        Fun Facts
+        Fun facts about me
       </h5>
       <ul class="list-disc ml-6 mb-6 text-md md:text-lg space-y-2">
         <li class="pl-1">
-          I bought my first 🏡 at 17 years old with my mom 💙.
+          I bought my first 🏡 at 17 years old with my mom.
         </li>
         <li class="pl-1">
           I have a two 🐶's named <span class="font-bold">Rogue</span> and <span class="font-bold">Malibu</span>.
@@ -42,11 +42,11 @@ useSeoMeta({
       </ul>
 
       <p class="text-md md:text-lg mb-6">
-        Alright that's enough about me! if you would like to learn more about my
-        work please feel free to check out my
+        Alright, that's enough about me! If you would like to learn more about my
+        work, please feel free to check out my
         <NuxtLink class="underline" to="/projects">
           projects
-        </NuxtLink>. Also If you would like to talk to me about some business inquiries please feel free
+        </NuxtLink>. Also, if you would like to talk to me about any business inquiries, please feel free
         to <NuxtLink class="underline" to="/contact">
           contact me
         </NuxtLink> or connect with me on any of my social media platforms below.

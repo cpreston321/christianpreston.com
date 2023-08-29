@@ -1,7 +1,7 @@
 ---
 title: NGA
 category: Websites
-description: National Governors Association wanted a new website built so I helped them create new components and widgets for the site.
+description: The National Governors Association wanted a new website built so I helped them create new components and widgets for the site while migrating their data.
 icon: /projects/nga/icon.png
 logo: /projects/nga/logo.png
 preview: /projects/nga/preview.png

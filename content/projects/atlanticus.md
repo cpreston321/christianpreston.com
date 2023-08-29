@@ -1,7 +1,7 @@
 ---
 title: Atlanticus
 category: Websites
-description: A organization that wanted a full re-design in wordpress using Timber framework, plus data migration.
+description: An organization that wanted a full redesign in WordPress using the Timber framework, along with data migration and custom plugins.
 icon: /projects/atlanticus/icon.png
 logo: /projects/atlanticus/logo.png
 preview: /projects/atlanticus/preview.png

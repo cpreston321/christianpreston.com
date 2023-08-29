@@ -25,6 +25,7 @@ const tagNameIconsMap = [
   [['angular', 'angularjs'], 'logos-angular-icon'],
   [['node', 'nodejs'], 'logos-nodejs-icon'],
   [['svelte'], 'logos-svelte-icon'],
+  [['mui', 'material-ui'], 'logos:material-ui']
 ]
 
 const findIcon = (name: string): string => {
@@ -34,11 +35,11 @@ const findIcon = (name: string): string => {
 </script>
 
 <template>
-  <div v-if="tags.length > 0" class="flex flex-wrap mb-2">
+  <div v-if="tags.length > 0" class="flex flex-wrap space-x-3 mb-2">
     <div
       v-for="(tag, idx) in tags"
       :key="idx"
-      class="m-1 px-2 py-1 rounded-lg text-xs font-semibold bg-dark/5 ring ring-dark/10 dark:(bg-white/10 ring-white/15)"
+      class="px-2 py-1 rounded-lg text-xs font-semibold bg-dark/5 ring ring-dark/10 dark:(bg-white/10 ring-white/15)"
     >
       <div class="flex flex-row">
         <span class="self-center">#</span>

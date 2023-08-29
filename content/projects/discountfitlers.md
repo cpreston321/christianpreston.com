@@ -1,7 +1,7 @@
 ---
 title: DiscountFilters
 category: Websites
-description: E-commerce site that sells air, water & pool filters. Back in 2018 we did a massive re-design that was coded from scratch.
+description: E-commerce site that sells air, water, and pool filters. Back in 2018, we did a massive redesign that was coded from scratch on the front-end.
 icon: /projects/discountfilters/icon.webp
 logo: /projects/discountfilters/logo.webp
 preview: /projects/discountfilters/preview.png

@@ -22,13 +22,14 @@ withDefaults(defineProps<ProjectCardProps>(), {
         link: project.link
       })"
     >
-      <NuxtPicture
+      <NuxtImg
+        class="w-full h-full object-cover object-top transition-all duration-300 hover:scale-105"
         :src="project.preview"
         :title="project.name"
         :alt="project.name"
       />
     </a>
-    <div class="p-4 mt-2 md:mt-3">
+    <div class="flex flex-col p-4">
       <ProjectTags :tags="project.tags" />
       <h3 class="font-bold text-2xl md:text-3xl mb-2">
         {{ project.title }}
@@ -39,7 +40,7 @@ withDefaults(defineProps<ProjectCardProps>(), {
       <a
         :href="project.link"
         target="_blank"
-        class="text-lg flex flex-row mt-3 justify-flex-end hover:opacity-75"
+        class="text-lg flex flex-row mt-2 justify-flex-end hover:opacity-75"
         :title="project.title"
         @click="umTrackEvent(`project:clicked`, {
           name: project.name,

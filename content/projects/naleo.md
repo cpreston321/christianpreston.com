@@ -1,7 +1,7 @@
 ---
 title: Naleo
 category: Websites
-description: Naleo.org is a Educational Fund, I helped them switch platforms. Helped re-create the site and add new components using Timber.
+description: Naleo.org is an educational fund. I assisted them in switching platforms, recreating the site, and incorporating new components using Timber.
 icon: /projects/naleo/icon.png
 logo: /projects/naleo/logo.png
 preview: /projects/naleo/preview.png
