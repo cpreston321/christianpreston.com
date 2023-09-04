@@ -41,8 +41,8 @@ devDependencies:
     specifier: ^0.6.3
     version: 0.6.3
   '@types/ua-parser-js':
-    specifier: ^0.7.36
-    version: 0.7.36
+    specifier: ^0.7.37
+    version: 0.7.37
   '@unocss/nuxt':
     specifier: ^0.55.3
     version: 0.55.3(postcss@8.4.28)(vite@4.4.9)(webpack@5.88.2)
@@ -2260,8 +2260,8 @@ packages:
     resolution: {integrity: sha512-cJRQXpObxfNKkFAZbJl2yjWtJCqELQIdShsogr1d2MilP8dKD9TE/nEKHkJgUNHdGKCQaf9HbIynuV2csLGVLg==}
     dev: true
 
-  /@types/ua-parser-js@0.7.36:
-    resolution: {integrity: sha512-N1rW+njavs70y2cApeIw1vLMYXRwfBy+7trgavGuuTfOd7j1Yh7QTRc/yqsPl6ncokt72ZXuxEU0PiCp9bSwNQ==}
+  /@types/ua-parser-js@0.7.37:
+    resolution: {integrity: sha512-4sOxS3ZWXC0uHJLYcWAaLMxTvjRX3hT96eF4YWUh1ovTaenvibaZOE5uXtIp4mksKMLRwo7YDiCBCw6vBiUPVg==}
     dev: true
 
   /@types/unist@2.0.7:

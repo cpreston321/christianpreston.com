@@ -23,7 +23,7 @@
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/turnstile": "^0.6.3",
-    "@types/ua-parser-js": "^0.7.36",
+    "@types/ua-parser-js": "^0.7.37",
     "@unocss/nuxt": "^0.55.3",
     "@vueuse/motion": "^2.0.0",
     "@vueuse/nuxt": "^10.4.1",
