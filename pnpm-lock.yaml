@@ -14,8 +14,8 @@ dependencies:
 
 devDependencies:
   '@formkit/addons':
-    specifier: ^0.19.0
-    version: 0.19.0
+    specifier: ^1.0.0
+    version: 1.0.0
   '@formkit/nuxt':
     specifier: ^0.19.0
     version: 0.19.0
@@ -928,13 +928,13 @@ packages:
     dev: true
     optional: true
 
-  /@formkit/addons@0.19.0:
-    resolution: {integrity: sha512-USPlASJIAMx1LGI9VyChTAjqirLAgy0jrURQvn0WY5RW4Ubin9IzE9LRpElVs5cEZMnSIEGA1YwHjqG6ypD/3Q==}
+  /@formkit/addons@1.0.0:
+    resolution: {integrity: sha512-MYOjbhF115POxQVNPN6HTuNJSZp5Q6sA7awNx7F8TNgJpqNlaRxIWrv6gzlP7Dnh2lApZiB+JxiXKStoxhFVyg==}
     dependencies:
       '@formkit/auto-animate': 0.7.0
-      '@formkit/core': 0.19.0
-      '@formkit/inputs': 0.19.0
-      '@formkit/utils': 0.19.0
+      '@formkit/core': 1.0.0
+      '@formkit/inputs': 1.0.0
+      '@formkit/utils': 1.0.0
     dev: true
 
   /@formkit/auto-animate@0.7.0:
@@ -945,6 +945,12 @@ packages:
     resolution: {integrity: sha512-7z+Ev7ZeFSULux62e3mTo+4TpREW2LrBkrfeoYZoYc1iexYFRxjkgqHS7Clkl15twUm67lq1XIRyvOvNTsJJrw==}
     dependencies:
       '@formkit/utils': 0.19.0
+    dev: true
+
+  /@formkit/core@1.0.0:
+    resolution: {integrity: sha512-rDFVwNngLcakltasYzmyYDPAYoCoakK+7h4/5V1bE1FQDabhVvJIc5EDH8U80RAKNLGS9xiQ1JK4FHGcZ3K+oQ==}
+    dependencies:
+      '@formkit/utils': 1.0.0
     dev: true
 
   /@formkit/dev@0.19.0:
@@ -967,6 +973,13 @@ packages:
     dependencies:
       '@formkit/core': 0.19.0
       '@formkit/utils': 0.19.0
+    dev: true
+
+  /@formkit/inputs@1.0.0:
+    resolution: {integrity: sha512-fP8kBshH3SD19mei6nAqTq6LTHI4/C1eAP4BYMHBuLwKYMq4SrfPKTCrTNefz+DF3yRaUzUqRg5TgBGgt6wtTw==}
+    dependencies:
+      '@formkit/core': 1.0.0
+      '@formkit/utils': 1.0.0
     dev: true
 
   /@formkit/nuxt@0.19.0:
@@ -1020,6 +1033,10 @@ packages:
 
   /@formkit/utils@0.19.0:
     resolution: {integrity: sha512-XJn1KTMTXQuw6O/0LcEgClPmnhfcHLV+U7H4yefxc9cOEZKjacqTtojaJs756yxqBUg/JEHLoHfHoHJ9MvnH0w==}
+    dev: true
+
+  /@formkit/utils@1.0.0:
+    resolution: {integrity: sha512-5T8PbHOajP/eJuoEeLgxA0g25nyVUZKfy2V2mW8idoph+9PT0nZUoIP+KA/PJ2mmexqtuykMT0A5knW8MiXqsw==}
     dev: true
 
   /@formkit/validation@0.19.0:
