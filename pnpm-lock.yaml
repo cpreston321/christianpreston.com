@@ -65,8 +65,8 @@ devDependencies:
     specifier: ^1.3.9
     version: 1.3.9(@unhead/vue@1.3.9)(vue@3.3.4)
   nuxt-umami:
-    specifier: ^2.5.3
-    version: 2.5.3(vue@3.3.4)
+    specifier: ^2.5.4
+    version: 2.5.4(vue@3.3.4)
   playwright:
     specifier: ^1.37.1
     version: 1.37.1
@@ -8256,8 +8256,8 @@ packages:
       - supports-color
     dev: true
 
-  /nuxt-umami@2.5.3(vue@3.3.4):
-    resolution: {integrity: sha512-1BPcSUFXrKwywCLg3SL+Yv3iaf9qFh7bAmFQGD2OsZGDvmZGbzelYII8Q4gu03/T/JIADzBJxfAXXLz876pWiw==}
+  /nuxt-umami@2.5.4(vue@3.3.4):
+    resolution: {integrity: sha512-tFfo1RalHBsqm4QI3+Wghl82CobNJR/KEXopvJDxu22cn7xTMSe61h28TkYQUK+RMdPBla8xOs7bapAGqLwUbA==}
     dependencies:
       '@vueuse/core': 10.4.1(vue@3.3.4)
     transitivePeerDependencies:
