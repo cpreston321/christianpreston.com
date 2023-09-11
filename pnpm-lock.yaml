@@ -9,8 +9,8 @@ dependencies:
     specifier: ^14.13.0
     version: 14.13.0
   ua-parser-js:
-    specifier: ^1.0.35
-    version: 1.0.35
+    specifier: ^1.0.36
+    version: 1.0.36
 
 devDependencies:
   '@formkit/addons':
@@ -931,14 +931,14 @@ packages:
   /@formkit/addons@0.19.0:
     resolution: {integrity: sha512-USPlASJIAMx1LGI9VyChTAjqirLAgy0jrURQvn0WY5RW4Ubin9IzE9LRpElVs5cEZMnSIEGA1YwHjqG6ypD/3Q==}
     dependencies:
-      '@formkit/auto-animate': 0.7.0
+      '@formkit/auto-animate': 0.8.0
       '@formkit/core': 0.19.0
       '@formkit/inputs': 0.19.0
       '@formkit/utils': 0.19.0
     dev: true
 
-  /@formkit/auto-animate@0.7.0:
-    resolution: {integrity: sha512-RczHUr0AhRPssREoNdRjLfk2b/id9/DFnbIq18QM8L7E4zNV3XH+WO480EZ46BQHDEsv76YPJ0JbG2Y2i3GfXw==}
+  /@formkit/auto-animate@0.8.0:
+    resolution: {integrity: sha512-G8f7489ka0mWyi+1IEZT+xgIwcpWtRMmE2x+IrVoQ+KM1cP6VDj/TbujZjwxdb0P8w8b16/qBfViRmydbYHwMw==}
     dev: true
 
   /@formkit/core@0.19.0:
@@ -1507,6 +1507,33 @@ packages:
       - supports-color
     dev: true
 
+  /@nuxt/kit@3.7.1:
+    resolution: {integrity: sha512-8k4q+92qLz5z7RdSOKrEJIjM63xXBg0z/WhTtZgXv1R5ULZ77usdTMjQYhQ+Kgd1NMkpIXeKaAO6903xrSt53Q==}
+    engines: {node: ^14.18.0 || >=16.10.0}
+    dependencies:
+      '@nuxt/schema': 3.7.1
+      c12: 1.4.2
+      consola: 3.2.3
+      defu: 6.1.2
+      globby: 13.2.2
+      hash-sum: 2.0.0
+      ignore: 5.2.4
+      jiti: 1.19.3
+      knitwork: 1.0.0
+      mlly: 1.4.2
+      pathe: 1.1.1
+      pkg-types: 1.0.3
+      scule: 1.0.0
+      semver: 7.5.4
+      ufo: 1.3.0
+      unctx: 2.3.1
+      unimport: 3.3.0
+      untyped: 1.4.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
   /@nuxt/schema@3.4.2:
     resolution: {integrity: sha512-DXB/fyjrAssFt9KGXyS+ZSfm1A0NYKhEoc01wyz1lGo//oETzUh3MmwE6X3x65NPqDlYZ6Mnj+IdftRRophv5Q==}
     engines: {node: ^14.18.0 || ^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
@@ -1538,6 +1565,25 @@ packages:
       std-env: 3.4.3
       ufo: 1.3.0
       unimport: 3.2.0(rollup@3.28.1)
+      untyped: 1.4.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /@nuxt/schema@3.7.1:
+    resolution: {integrity: sha512-+0W/oos7Ktm3eTwQ/78PrcAObR0+yQzHIUzbQ7HgUnEEntRGVxp4hnfng5dmhvVjJqQvpuGZHa3yIS/g41vE6A==}
+    engines: {node: ^14.18.0 || >=16.10.0}
+    dependencies:
+      '@nuxt/ui-templates': 1.3.1
+      defu: 6.1.2
+      hookable: 5.5.3
+      pathe: 1.1.1
+      pkg-types: 1.0.3
+      postcss-import-resolver: 2.0.0
+      std-env: 3.4.3
+      ufo: 1.3.0
+      unimport: 3.3.0
       untyped: 1.4.0
     transitivePeerDependencies:
       - rollup
@@ -1709,7 +1755,7 @@ packages:
   /@nuxtjs/mdc@0.1.2:
     resolution: {integrity: sha512-f0N+5s8jktxWIEw3Gln0thq95DtGZi9R0V1n5Qj1U5ShdLMUKw2EuTGKPqfFFMsOrGK81KLn8fDaq7OBU0UFzg==}
     dependencies:
-      '@nuxt/kit': 3.7.0
+      '@nuxt/kit': 3.7.1
       '@types/hast': 3.0.0
       '@types/mdast': 4.0.0
       '@vue/compiler-core': 3.3.4
@@ -7723,6 +7769,15 @@ packages:
       ufo: 1.3.0
     dev: true
 
+  /mlly@1.4.2:
+    resolution: {integrity: sha512-i/Ykufi2t1EZ6NaPLdfnZk2AX8cs0d+mTzVKuPfqPKPatxLApaBoxJQ9x1/uckXtrS/U5oisPMDkNs0yQTaBRg==}
+    dependencies:
+      acorn: 8.10.0
+      pathe: 1.1.1
+      pkg-types: 1.0.3
+      ufo: 1.3.0
+    dev: true
+
   /mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
@@ -10550,8 +10605,8 @@ packages:
     hasBin: true
     dev: true
 
-  /ua-parser-js@1.0.35:
-    resolution: {integrity: sha512-fKnGuqmTBnIE+/KXSzCn4db8RTigUzw1AN0DmdU6hJovUTbYJKyqj+8Mt1c4VfRDnOVJnENmfYkIPZ946UrSAA==}
+  /ua-parser-js@1.0.36:
+    resolution: {integrity: sha512-znuyCIXzl8ciS3+y3fHJI/2OhQIXbXw9MWC/o3qwyR+RGppjZHrM27CGFSKCJXi2Kctiz537iOu2KnXs1lMQhw==}
     dev: false
 
   /ufo@1.3.0:
@@ -10678,6 +10733,24 @@ packages:
       local-pkg: 0.4.3
       magic-string: 0.30.3
       mlly: 1.4.1
+      pathe: 1.1.1
+      pkg-types: 1.0.3
+      scule: 1.0.0
+      strip-literal: 1.3.0
+      unplugin: 1.4.0
+    transitivePeerDependencies:
+      - rollup
+    dev: true
+
+  /unimport@3.3.0:
+    resolution: {integrity: sha512-3jhq3ZG5hFZzrWGDCpx83kjPzefP/EeuKkIO1T0MA4Zwj+dO/Og1mFvZ4aZ5WSDm0FVbbdVIRH1zKBG7c4wOpg==}
+    dependencies:
+      '@rollup/pluginutils': 5.0.4(rollup@3.28.1)
+      escape-string-regexp: 5.0.0
+      fast-glob: 3.3.1
+      local-pkg: 0.4.3
+      magic-string: 0.30.3
+      mlly: 1.4.2
       pathe: 1.1.1
       pkg-types: 1.0.3
       scule: 1.0.0

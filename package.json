@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "discord.js": "^14.13.0",
-    "ua-parser-js": "^1.0.35"
+    "ua-parser-js": "^1.0.36"
   },
   "packageManager": "pnpm@8.7.0"
 }
