@@ -14,8 +14,8 @@ dependencies:
 
 devDependencies:
   '@formkit/addons':
-    specifier: ^0.19.0
-    version: 0.19.0
+    specifier: ^1.2.2
+    version: 1.2.2
   '@formkit/nuxt':
     specifier: ^0.19.0
     version: 0.19.0
@@ -928,23 +928,29 @@ packages:
     dev: true
     optional: true
 
-  /@formkit/addons@0.19.0:
-    resolution: {integrity: sha512-USPlASJIAMx1LGI9VyChTAjqirLAgy0jrURQvn0WY5RW4Ubin9IzE9LRpElVs5cEZMnSIEGA1YwHjqG6ypD/3Q==}
+  /@formkit/addons@1.2.2:
+    resolution: {integrity: sha512-5c4m0cToD8AbOFD38clEZSBNcXHY7xKjlEXvxs8lDlC4DSCkrdcbp5KgCFHJqci4p8z1zkxG/H8GXwYFaVRtTw==}
     dependencies:
-      '@formkit/auto-animate': 0.7.0
-      '@formkit/core': 0.19.0
-      '@formkit/inputs': 0.19.0
-      '@formkit/utils': 0.19.0
+      '@formkit/auto-animate': 0.8.0
+      '@formkit/core': 1.2.2
+      '@formkit/inputs': 1.2.2
+      '@formkit/utils': 1.2.2
     dev: true
 
-  /@formkit/auto-animate@0.7.0:
-    resolution: {integrity: sha512-RczHUr0AhRPssREoNdRjLfk2b/id9/DFnbIq18QM8L7E4zNV3XH+WO480EZ46BQHDEsv76YPJ0JbG2Y2i3GfXw==}
+  /@formkit/auto-animate@0.8.0:
+    resolution: {integrity: sha512-G8f7489ka0mWyi+1IEZT+xgIwcpWtRMmE2x+IrVoQ+KM1cP6VDj/TbujZjwxdb0P8w8b16/qBfViRmydbYHwMw==}
     dev: true
 
   /@formkit/core@0.19.0:
     resolution: {integrity: sha512-7z+Ev7ZeFSULux62e3mTo+4TpREW2LrBkrfeoYZoYc1iexYFRxjkgqHS7Clkl15twUm67lq1XIRyvOvNTsJJrw==}
     dependencies:
       '@formkit/utils': 0.19.0
+    dev: true
+
+  /@formkit/core@1.2.2:
+    resolution: {integrity: sha512-aJoZW7ZWXdwVBdw2acv62aPaecZ44PnK9eyp/hdMrMxT9xW3I84MytCdII8DYpxLmloaE+NoUANZIvlkTRGlHg==}
+    dependencies:
+      '@formkit/utils': 1.2.2
     dev: true
 
   /@formkit/dev@0.19.0:
@@ -967,6 +973,13 @@ packages:
     dependencies:
       '@formkit/core': 0.19.0
       '@formkit/utils': 0.19.0
+    dev: true
+
+  /@formkit/inputs@1.2.2:
+    resolution: {integrity: sha512-apVGQ+9eHRD8qi9h0LRvaI9UrumDUwXQSw3gMQfDvfCjkqZXY4+m/WS3FraqHH4Mqs7cjryYRYrHYpAaVQtqKQ==}
+    dependencies:
+      '@formkit/core': 1.2.2
+      '@formkit/utils': 1.2.2
     dev: true
 
   /@formkit/nuxt@0.19.0:
@@ -1020,6 +1033,10 @@ packages:
 
   /@formkit/utils@0.19.0:
     resolution: {integrity: sha512-XJn1KTMTXQuw6O/0LcEgClPmnhfcHLV+U7H4yefxc9cOEZKjacqTtojaJs756yxqBUg/JEHLoHfHoHJ9MvnH0w==}
+    dev: true
+
+  /@formkit/utils@1.2.2:
+    resolution: {integrity: sha512-4EGm4nfZGSJik0QRAEybxO52F3QhbOfX/KgtWfB3/dDUEOCx5RWDxIs/CU2yI4bceDl2aK8l/yDYwCYK9SO5MA==}
     dev: true
 
   /@formkit/validation@0.19.0:
@@ -1507,6 +1524,33 @@ packages:
       - supports-color
     dev: true
 
+  /@nuxt/kit@3.7.4:
+    resolution: {integrity: sha512-/S5abZL62BITCvC/TY3KWA6N721U1Osln3cQdBb56XHIeafZCBVqTi92Xb0o7ovl72mMRhrKwRu7elzvz9oT/g==}
+    engines: {node: ^14.18.0 || >=16.10.0}
+    dependencies:
+      '@nuxt/schema': 3.7.4
+      c12: 1.4.2
+      consola: 3.2.3
+      defu: 6.1.2
+      globby: 13.2.2
+      hash-sum: 2.0.0
+      ignore: 5.2.4
+      jiti: 1.20.0
+      knitwork: 1.0.0
+      mlly: 1.4.2
+      pathe: 1.1.1
+      pkg-types: 1.0.3
+      scule: 1.0.0
+      semver: 7.5.4
+      ufo: 1.3.0
+      unctx: 2.3.1
+      unimport: 3.4.0
+      untyped: 1.4.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
   /@nuxt/schema@3.4.2:
     resolution: {integrity: sha512-DXB/fyjrAssFt9KGXyS+ZSfm1A0NYKhEoc01wyz1lGo//oETzUh3MmwE6X3x65NPqDlYZ6Mnj+IdftRRophv5Q==}
     engines: {node: ^14.18.0 || ^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
@@ -1538,6 +1582,26 @@ packages:
       std-env: 3.4.3
       ufo: 1.3.0
       unimport: 3.2.0(rollup@3.28.1)
+      untyped: 1.4.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /@nuxt/schema@3.7.4:
+    resolution: {integrity: sha512-q6js+97vDha4Fa2x2kDVEuokJr+CGIh1TY2wZp2PLZ7NhG3XEeib7x9Hq8XE8B6pD0GKBRy3eRPPOY69gekBCw==}
+    engines: {node: ^14.18.0 || >=16.10.0}
+    dependencies:
+      '@nuxt/ui-templates': 1.3.1
+      consola: 3.2.3
+      defu: 6.1.2
+      hookable: 5.5.3
+      pathe: 1.1.1
+      pkg-types: 1.0.3
+      postcss-import-resolver: 2.0.0
+      std-env: 3.4.3
+      ufo: 1.3.0
+      unimport: 3.4.0
       untyped: 1.4.0
     transitivePeerDependencies:
       - rollup
@@ -1709,7 +1773,7 @@ packages:
   /@nuxtjs/mdc@0.1.2:
     resolution: {integrity: sha512-f0N+5s8jktxWIEw3Gln0thq95DtGZi9R0V1n5Qj1U5ShdLMUKw2EuTGKPqfFFMsOrGK81KLn8fDaq7OBU0UFzg==}
     dependencies:
-      '@nuxt/kit': 3.7.0
+      '@nuxt/kit': 3.7.4
       '@types/hast': 3.0.0
       '@types/mdast': 4.0.0
       '@vue/compiler-core': 3.3.4
@@ -6481,6 +6545,11 @@ packages:
     hasBin: true
     dev: true
 
+  /jiti@1.20.0:
+    resolution: {integrity: sha512-3TV69ZbrvV6U5DfQimop50jE9Dl6J8O1ja1dvBbMba/sZ3YBEQqJ2VZRoQPVnhlzjNtU1vaXRZVrVjU4qtm8yA==}
+    hasBin: true
+    dev: true
+
   /joi@17.10.0:
     resolution: {integrity: sha512-hrazgRSlhzacZ69LdcKfhi3Vu13z2yFfoAzmEov3yFIJlatTdVGUW6vle1zjH8qkzdCn/qGw8rapjqsObbYXAg==}
     dependencies:
@@ -7716,6 +7785,15 @@ packages:
 
   /mlly@1.4.1:
     resolution: {integrity: sha512-SCDs78Q2o09jiZiE2WziwVBEqXQ02XkGdUy45cbJf+BpYRIjArXRJ1Wbowxkb+NaM9DWvS3UC9GiO/6eqvQ/pg==}
+    dependencies:
+      acorn: 8.10.0
+      pathe: 1.1.1
+      pkg-types: 1.0.3
+      ufo: 1.3.0
+    dev: true
+
+  /mlly@1.4.2:
+    resolution: {integrity: sha512-i/Ykufi2t1EZ6NaPLdfnZk2AX8cs0d+mTzVKuPfqPKPatxLApaBoxJQ9x1/uckXtrS/U5oisPMDkNs0yQTaBRg==}
     dependencies:
       acorn: 8.10.0
       pathe: 1.1.1
@@ -10687,6 +10765,24 @@ packages:
       - rollup
     dev: true
 
+  /unimport@3.4.0:
+    resolution: {integrity: sha512-M/lfFEgufIT156QAr/jWHLUn55kEmxBBiQsMxvRSIbquwmeJEyQYgshHDEvQDWlSJrVOOTAgnJ3FvlsrpGkanA==}
+    dependencies:
+      '@rollup/pluginutils': 5.0.4(rollup@3.28.1)
+      escape-string-regexp: 5.0.0
+      fast-glob: 3.3.1
+      local-pkg: 0.4.3
+      magic-string: 0.30.3
+      mlly: 1.4.2
+      pathe: 1.1.1
+      pkg-types: 1.0.3
+      scule: 1.0.0
+      strip-literal: 1.3.0
+      unplugin: 1.5.0
+    transitivePeerDependencies:
+      - rollup
+    dev: true
+
   /unique-filename@3.0.0:
     resolution: {integrity: sha512-afXhuC55wkAmZ0P18QsVE6kp8JaxrEokN2HGIoIVv2ijHQd419H0+6EigAFcIzXeMIkcIkNBpB3L/DXB3cTS/g==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -10871,6 +10967,15 @@ packages:
 
   /unplugin@1.4.0:
     resolution: {integrity: sha512-5x4eIEL6WgbzqGtF9UV8VEC/ehKptPXDS6L2b0mv4FRMkJxRtjaJfOWDd6a8+kYbqsjklix7yWP0N3SUepjXcg==}
+    dependencies:
+      acorn: 8.10.0
+      chokidar: 3.5.3
+      webpack-sources: 3.2.3
+      webpack-virtual-modules: 0.5.0
+    dev: true
+
+  /unplugin@1.5.0:
+    resolution: {integrity: sha512-9ZdRwbh/4gcm1JTOkp9lAkIDrtOyOxgHmY7cjuwI8L/2RTikMcVG25GsZwNAgRuap3iDw2jeq7eoqtAsz5rW3A==}
     dependencies:
       acorn: 8.10.0
       chokidar: 3.5.3
