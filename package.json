@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@formkit/addons": "^0.19.0",
-    "@formkit/nuxt": "^0.19.0",
+    "@formkit/nuxt": "^1.2.2",
     "@nuxt/content": "^2.8.0",
     "@nuxt/devtools": "^0.8.2",
     "@nuxt/image-edge": "1.0.0-rc.1-28221965.bad4420",
