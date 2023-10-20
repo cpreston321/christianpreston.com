@@ -51,7 +51,7 @@ const toggleTheme = () => {
           <li
             v-for="(link, idx) in links"
             :key="link.name"
-            class="p-2 md:px-3 self-center rounded-lg transition-colors ease-in duration-200"
+            class="p-2 md:px-3 self-center rounded-md transition-colors ease-in duration-200"
             :class="{
               'bg-black/10 dark:(bg-white/20)':
                 route.path === link.to,
