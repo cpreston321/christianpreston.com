@@ -16,7 +16,7 @@
   "devDependencies": {
     "@formkit/addons": "^1.2.2",
     "@formkit/nuxt": "^1.2.2",
-    "@nuxt/content": "^2.8.5",
+    "@nuxt/content": "^2.9.0",
     "@nuxt/image-edge": "1.0.0-rc.1-28221965.bad4420",
     "@nuxthq/studio": "^1.0.2",
     "@nuxtjs/color-mode": "^3.3.0",
