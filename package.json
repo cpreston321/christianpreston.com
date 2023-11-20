@@ -23,7 +23,7 @@
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/turnstile": "^0.6.3",
     "@types/ua-parser-js": "^0.7.38",
-    "@unocss/nuxt": "^0.56.5",
+    "@unocss/nuxt": "^0.57.6",
     "@vueuse/motion": "^2.0.0",
     "@vueuse/nuxt": "^10.5.0",
     "eslint": "^8.51.0",
