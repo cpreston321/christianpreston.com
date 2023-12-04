@@ -14,8 +14,8 @@ dependencies:
 
 devDependencies:
   '@formkit/addons':
-    specifier: ^1.2.2
-    version: 1.2.2
+    specifier: ^1.3.2
+    version: 1.3.2
   '@formkit/nuxt':
     specifier: ^1.2.2
     version: 1.2.2(vite@4.5.0)(webpack@5.89.0)
@@ -940,23 +940,29 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /@formkit/addons@1.2.2:
-    resolution: {integrity: sha512-5c4m0cToD8AbOFD38clEZSBNcXHY7xKjlEXvxs8lDlC4DSCkrdcbp5KgCFHJqci4p8z1zkxG/H8GXwYFaVRtTw==}
+  /@formkit/addons@1.3.2:
+    resolution: {integrity: sha512-v6u/vDQdqiUz+yE7cV23Xv23hPl4/PGa6jrGuF4ifyvNk+ilThe93VPwn6iaLYSL0fYfK3Pg0HE+BFQQc1CPng==}
     dependencies:
-      '@formkit/auto-animate': 0.8.0
-      '@formkit/core': 1.2.2
-      '@formkit/inputs': 1.2.2
-      '@formkit/utils': 1.2.2
+      '@formkit/auto-animate': 0.8.1
+      '@formkit/core': 1.3.2
+      '@formkit/inputs': 1.3.2
+      '@formkit/utils': 1.3.2
     dev: true
 
-  /@formkit/auto-animate@0.8.0:
-    resolution: {integrity: sha512-G8f7489ka0mWyi+1IEZT+xgIwcpWtRMmE2x+IrVoQ+KM1cP6VDj/TbujZjwxdb0P8w8b16/qBfViRmydbYHwMw==}
+  /@formkit/auto-animate@0.8.1:
+    resolution: {integrity: sha512-0/Z2cuNXWVVIG/l0SpcHAWFhGdvLJ8DRvEfRWvmojtmRWfEy+LWNwgDazbZqY0qQYtkHcoEK3jBLkhiZaB/4Ig==}
     dev: true
 
   /@formkit/core@1.2.2:
     resolution: {integrity: sha512-aJoZW7ZWXdwVBdw2acv62aPaecZ44PnK9eyp/hdMrMxT9xW3I84MytCdII8DYpxLmloaE+NoUANZIvlkTRGlHg==}
     dependencies:
       '@formkit/utils': 1.2.2
+    dev: true
+
+  /@formkit/core@1.3.2:
+    resolution: {integrity: sha512-sqspEsp4CnS9cx+HWWZhN91dYyQB2Mgrhtp5tVPHPiNDpS7Wvl1L9xI/6iUc3rXxH0YhHQ8ptyLIQKO2vNpfGg==}
+    dependencies:
+      '@formkit/utils': 1.3.2
     dev: true
 
   /@formkit/dev@1.2.2:
@@ -979,6 +985,13 @@ packages:
     dependencies:
       '@formkit/core': 1.2.2
       '@formkit/utils': 1.2.2
+    dev: true
+
+  /@formkit/inputs@1.3.2:
+    resolution: {integrity: sha512-Z8f3S5j/r7+RS4zexon1mMJbSmqchYtFxAJ7ROJTkA0CA9gA7hwlPAQHmA/+2Tc1PWIexGJEBCqI5IL8gCGCBA==}
+    dependencies:
+      '@formkit/core': 1.3.2
+      '@formkit/utils': 1.3.2
     dev: true
 
   /@formkit/nuxt@1.2.2(vite@4.5.0)(webpack@5.89.0):
@@ -1037,6 +1050,10 @@ packages:
 
   /@formkit/utils@1.2.2:
     resolution: {integrity: sha512-4EGm4nfZGSJik0QRAEybxO52F3QhbOfX/KgtWfB3/dDUEOCx5RWDxIs/CU2yI4bceDl2aK8l/yDYwCYK9SO5MA==}
+    dev: true
+
+  /@formkit/utils@1.3.2:
+    resolution: {integrity: sha512-L7ltaR5vV5NK6H4NKYx8xZ85l60TutgvQHv95B7ncj9pDNUUqKK9H56zkYFXPpCQhtKU/UbK19NNOuKI0OVfkw==}
     dev: true
 
   /@formkit/validation@1.2.2:
