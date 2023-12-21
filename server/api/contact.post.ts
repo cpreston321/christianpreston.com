@@ -1,5 +1,6 @@
 import parserUa from 'ua-parser-js'
-import { EmbedBuilder, WebhookClient, APIMessage } from 'discord.js'
+import type { APIMessage } from 'discord.js'
+import { EmbedBuilder, WebhookClient } from 'discord.js'
 
 export default defineEventHandler(async (event) => {
   const headers = getRequestHeaders(event)
@@ -16,25 +17,25 @@ export default defineEventHandler(async (event) => {
     // 500 Internal Server Error
     throw createError({
       statusCode: 500,
-      statusMessage: 'Discord webhook URL is not configured'
+      statusMessage: 'Discord webhook URL is not configured. Please contact the developer.',
     })
   }
 
-  if (!verify.success && process.env.NODE_ENV !== 'development') {
+  if (!verify.success && !import.meta.dev) {
     // 403 Forbidden
     throw createError({
       statusCode: 403,
-      statusMessage: 'Turnstile token is invalid'
+      statusMessage: 'Turnstile token is invalid. Please contact the developer.',
     })
   }
 
   const webhookClient = new WebhookClient({ url: discordWebhookUrl })
   const embed = new EmbedBuilder()
-    .setTitle('Website - Contact Form')
+    .setTitle('Personal Inquiry - Contact Form')
     .setColor(0x00FFFF)
-  // To Ensure the message is somehow a bot then I will know through user agent.
+    // To Ensure the message is somehow a bot then I will know through user agent.
     .setDescription(
-        `--------\n**Browser:** ${agent.browser.name} ${agent.browser.version}\n\n**OS:** ${agent.os.name}\n--------`
+        `--------\n**Browser:** ${agent.browser.name} ${agent.browser.version}\n\n**OS:** ${agent.os.name}\n--------`,
     )
     .addFields([
       {
@@ -43,33 +44,33 @@ export default defineEventHandler(async (event) => {
       },
       {
         name: 'Name',
-        value: name
+        value: name,
       },
       {
         name: 'Email',
-        value: email
+        value: email,
       },
       {
         name: 'Message',
-        value: message
-      }
+        value: message,
+      },
     ])
 
   const status = (await webhookClient.send({
     username: 'FormBot',
     avatarURL: 'https://christianpreston.com/favicon.jpeg',
-    embeds: [embed]
+    embeds: [embed],
   })) as APIMessage
 
   if (!status?.id) {
     throw createError({
       statusCode: 500,
-      statusMessage: 'Message failed to send'
+      statusMessage: 'Message failed to send',
     })
   }
 
   return {
     ok: true,
-    message: 'Message sent successfully'
+    message: 'Message sent successfully',
   }
 })

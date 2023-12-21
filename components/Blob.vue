@@ -1,6 +1,6 @@
 <template>
   <div
-    class="blur-blob rounded-full absolute -z-10 w-30 md:w-76 h-40 md:h-64 opacity-70 blur-3xl"
+    class="blur-blob absolute h-40 w-30 rounded-full opacity-70 blur-3xl -z-10 md:h-64 md:w-76"
   />
 </template>
 
