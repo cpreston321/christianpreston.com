@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 useSeoMeta({
   title: 'Projects',
-  description: 'These are some of my projects that I have worked on in past and present.'
+  description: 'These are some of my projects that I have worked on in past and present.',
 })
 
 const page = ref(1)
@@ -11,11 +11,10 @@ const pageLimit = computed(() => page.value * 12)
 const { data: projects } = await useAsyncData('projects', () =>
   queryContent('/projects')
     .sort({
-      title: 1
+      title: 1,
     })
     .limit(pageLimit.value)
-    .find()
-)
+    .find())
 
 // useInfiniteScroll(
 //   el,
@@ -31,7 +30,7 @@ const { data: projects } = await useAsyncData('projects', () =>
 </script>
 
 <template>
-  <div  class="flex flex-col">
+  <div class="flex flex-col">
     <PageTitle>Projects</PageTitle>
     <!-- <input
       class="px-4 py-2 rounded-8 mb-3"
@@ -41,7 +40,7 @@ const { data: projects } = await useAsyncData('projects', () =>
     <div
       v-if="projects?.length"
       ref="el"
-      class="grid grid-cols sm:grid-cols-2 gap-4"
+      class="grid-cols grid gap-4 sm:grid-cols-2"
     >
       <ProjectCard
         v-for="project in projects"

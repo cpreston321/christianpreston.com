@@ -1,17 +1,17 @@
 <script lang="ts" setup>
 useSeoMeta({
-  googleSiteVerification: 'sRar0M0gLALXwyv7ycuIFXRlG4e2Sly_RQNESdxZlgs'
+  googleSiteVerification: 'sRar0M0gLALXwyv7ycuIFXRlG4e2Sly_RQNESdxZlgs',
 })
 
 const { x, y } = useMouse({
   touch: false,
-  type: 'client'
+  type: 'client',
 })
 
 const cords = computed(() => {
   return {
     x: x.value - 40,
-    y: y.value - 40
+    y: y.value - 40,
   }
 })
 </script>
@@ -19,7 +19,7 @@ const cords = computed(() => {
 <template>
   <Blob
     id="cursor-blob"
-    class="animate-cursor-blob w-20! h-20! fixed z-9 blur-xl"
+    class="animate-cursor-blob fixed z-9 blur-xl h-20! w-20!"
     :style="{ top: `${cords.y}px`, left: `${cords.x}px` }"
   />
 
@@ -28,7 +28,6 @@ const cords = computed(() => {
 
   <!-- Main Content -->
   <BgWrapper>
-    <SeoKit />
     <OgImageScreenshot
       selector="main"
       mask="#nuxt-devtools-container, #footer, #header, .nuxt-devtools-toggle"
@@ -39,11 +38,6 @@ const cords = computed(() => {
 
   <!-- Footer  -->
   <Footer />
-
-  <!-- CMD+K -->
-  <ClientOnly>
-    <CmdK />
-  </ClientOnly>
 </template>
 
 <style lang="postcss">

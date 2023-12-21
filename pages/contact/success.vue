@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 useSeoMeta({
   title: 'Contact Success',
-  description: 'Thank you for submitting your contact information. I will reply to you as soon as I can!'
+  description: 'Thank you for submitting your contact information. I will reply to you as soon as I can!',
 })
 
 const router = useRouter()
