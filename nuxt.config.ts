@@ -1,49 +1,32 @@
-import { transformerDirectives, transformerVariantGroup } from 'unocss'
-
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   devtools: true,
-
-  css: ['@/assets/formkit.css'],
-
+  css: ['@unocss/reset/tailwind.css', '@/assets/formkit.css'],
   runtimeConfig: {
     discordWebhookUrl: '',
     turnstile: {
-      secretKey: undefined
+      secretKey: undefined,
     },
     public: {
-      language: 'en-US',
-      siteUrl: 'https://christianpreston.com',
-      siteName: 'Christian Preston',
-      siteDescription: 'I’m a self-taught software developer based in Indianapolis, IN, with a passion for collaboration, building, contributing, and continuous learning. Explore my portfolio and experience in web development, software engineering, and more.',
       turnstile: {
-        siteKey: '1x00000000000000000000AA'
-      }
-    }
+        siteKey: '1x00000000000000000000AA',
+      },
+    },
   },
 
   app: {
     head: {
-      link: [
-        { rel: 'icon', type: 'image/jpeg', href: '/favicon.jpeg' }
-      ]
-    }
+      link: [{ rel: 'icon', type: 'image/jpeg', href: '/favicon.jpeg' }],
+    },
   },
 
-  /**
-   * Nuxt SEO Kit Layer
-   * @see https://github.com/harlan-zw/nuxt-seo-kit
-   */
-  extends: [
-    'nuxt-seo-kit',
-    'nuxt-umami'
-  ],
+  extends: ['nuxt-umami'],
 
   appConfig: {
     umami: {
       ignoreLocalhost: true,
-      version: 2
-    }
+      version: 2,
+    },
   },
 
   /**
@@ -65,22 +48,25 @@ export default defineNuxtConfig({
     '@nuxtjs/turnstile',
     '@unocss/nuxt',
     '@nuxt/content',
-    '@nuxt/image-edge',
+    '@nuxt/image',
     '@vueuse/nuxt',
+    '@nuxtseo/module',
     // '@vueuse/motion/nuxt',
     '@formkit/nuxt',
     '@nuxtjs/color-mode',
-    '@nuxthq/studio'
+    '@nuxthq/studio',
+    '@nuxt/image',
   ],
 
   colorMode: {
-    classSuffix: ''
+    classSuffix: '',
   },
 
-  ogImage: {
-    defaults: {
-      mask: '.nuxt-devtools-toggle'
-    }
+  site: {
+    defaultLocale: 'en-US',
+    name: 'Christian Preston',
+    description: 'I’m a self-taught software developer based in Indianapolis, IN, with a passion for collaboration, building, contributing, and continuous learning. Explore my portfolio and experience in web development, software engineering, and more.',
+    url: 'https://christianpreston.com',
   },
 
   // motion: {
@@ -101,44 +87,13 @@ export default defineNuxtConfig({
   //   }
   // },
 
-  unocss: {
-    uno: true,
-    preflight: true,
-    webFonts: {
-      fonts: {
-        sans: 'DM Sans',
-        serif: 'DM Serif Display',
-        mono: 'DM Mono'
-      }
-    },
-    typography: true,
-    theme: {
-      darkMode: 'class',
-      animation: {
-        keyframes: {
-          blob: '{ 0%,100%{ transform: translate(0, 0) scale(1) } 25%{ transform: "translate(20px, -30px) scale(1.1)" } 50%{ transform: translate(0, 40px) scale(1) } 75%{ transform: translate(-30px, -25px) scale(0.9) }}'
-        },
-        durations: {
-          blob: '10s'
-        },
-        timingFns: {
-          blob: 'ease-in-out'
-        },
-        counts: {
-          blob: 'infinite'
-        }
-      }
-    },
-
-    transformers: [
-      transformerVariantGroup(),
-      transformerDirectives({
-        enforce: 'pre'
-      })
-    ]
+  image: {
+    domains: ['github.com', 'buymeacoffee.com'],
   },
 
-  image: {
-    domains: ['github.com', 'buymeacoffee.com']
-  }
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml'],
+    },
+  },
 })

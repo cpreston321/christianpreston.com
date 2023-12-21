@@ -4,14 +4,14 @@ const blobsPositions: string[] = [
   'bottom-0 left-3/4',
   'bottom-0 left-1/2',
   'bottom-0 right-1/2',
-  'top-0 -left-20'
+  'top-0 -left-20',
 ]
 const blobBgColors: string[] = [
   'bg-teal',
   'bg-purple',
   'bg-blue',
   'bg-pink',
-  'bg-cyan w-full! h-12!'
+  'bg-cyan w-full! h-12!',
 ]
 
 const blobs = blobsPositions.map((position, index) => {
@@ -21,12 +21,12 @@ const blobs = blobsPositions.map((position, index) => {
 
 <template>
   <main
-    class="-z-10 w-full min-h-screen flex justify-center py-24"
+    class="min-h-[100dvh] w-full flex justify-center py-24 -z-10"
   >
     <div
-      class="flex flex-col justify-center relative max-w-screen-lg w-full p-4 sm:p-6 md:p-8"
+      class="relative w-full max-w-screen-lg flex flex-col justify-center p-4 md:p-8 sm:p-6"
     >
-      <div class="z-0 fixed top-0 max-w-screen-lg w-full h-full">
+      <div class="fixed top-0 z-0 h-full w-full max-w-screen-lg">
         <Blob v-for="blob in blobs" :key="blob" :class="blob" />
       </div>
 

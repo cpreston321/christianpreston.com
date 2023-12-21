@@ -4,26 +4,26 @@ interface ProjectCardProps {
 }
 
 withDefaults(defineProps<ProjectCardProps>(), {
-  project: () => ({})
+  project: () => ({}),
 })
 </script>
 
 <template>
   <div
-    class="flex flex-col w-full ring ring-dark/10 bg-white/20 dark:(bg-white/10 ring-white/30) rounded-lg w-[350px]"
+    class="w-[350px] w-full flex flex-col rounded-lg bg-white/20 ring ring-dark/10 dark:(bg-white/10 ring-white/30)"
   >
     <a
-      class="h-46 md:h-55 overflow-hidden rounded-t-lg"
+      class="h-46 overflow-hidden rounded-t-lg md:h-55"
       :href="project.link"
       target="_blank"
       @click="umTrackEvent(`project:clicked`, {
         name: project.name,
         title: project.title,
-        link: project.link
+        link: project.link,
       })"
     >
       <NuxtImg
-        class="w-full h-full object-cover object-top transition-all duration-300 hover:scale-105"
+        class="h-full w-full object-cover object-top transition-all duration-300 hover:scale-105"
         :src="project.preview"
         :title="project.name"
         :alt="project.name"
@@ -31,7 +31,7 @@ withDefaults(defineProps<ProjectCardProps>(), {
     </a>
     <div class="flex flex-col p-4">
       <ProjectTags :tags="project.tags" />
-      <h3 class="font-bold text-2xl md:text-3xl mb-2">
+      <h3 class="mb-2 text-2xl font-bold md:text-3xl">
         {{ project.title }}
       </h3>
       <p class="text-xs md:text-sm" :title="project.description">
@@ -40,12 +40,12 @@ withDefaults(defineProps<ProjectCardProps>(), {
       <a
         :href="project.link"
         target="_blank"
-        class="text-lg flex flex-row mt-2 justify-flex-end hover:opacity-75"
+        class="justify-flex-end mt-2 flex flex-row text-lg hover:opacity-75"
         :title="project.title"
         @click="umTrackEvent(`project:clicked`, {
           name: project.name,
           title: project.title,
-          link: project.link
+          link: project.link,
         })"
       >
         <IconCSS name="eva:external-link-fill" />

@@ -1,36 +1,26 @@
+# Portfolio
+
 ![Personal Card Image](./public/site_card.png)
 
-Theme is heavily inspired by [Zernonia Personal Website](https://github.com/zernonia/zernonia.com) 😍
+---
 
-## Setup
+[![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
-Make sure to install the dependencies:
+## Development
 
-```bash
-# yarn
-yarn install
-```
+### Prerequisites
 
-## Development Server
+- [pnpm](https://pnpm.js.org/en/installation)
 
-Start the development server on http://localhost:3000
+### Install Dependencies
 
 ```bash
-yarn dev
+pnpm i
 ```
 
-## Production
-
-Build the application for production:
+### Dev Server
 
 ```bash
-yarn build
+pnpm dev
 ```
-
-Locally preview production build:
-
-```bash
-yarn preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.

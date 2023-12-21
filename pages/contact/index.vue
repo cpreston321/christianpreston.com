@@ -3,7 +3,7 @@ import { reset } from '@formkit/core'
 
 useSeoMeta({
   title: 'Contact',
-  description: 'Have a question or inquiry? Don’t hesitate to reach out.'
+  description: 'Have a question or inquiry? Don’t hesitate to reach out.',
 })
 
 const router = useRouter()
@@ -14,26 +14,26 @@ interface ContactForm {
   message: string
 }
 
-const submit = async (data: ContactForm) => {
+async function submit(data: ContactForm) {
   try {
     const response = await $fetch('/api/contact', {
       method: 'POST',
       body: data,
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+      },
     })
 
     if (response.ok) {
       reset('contact', {
         name: '',
         email: '',
-        message: ''
+        message: '',
       })
       router.push('/contact/success')
     }
-  } catch (error) {
-    // eslint-disable-next-line no-console
+  }
+  catch (error) {
     console.error('Error submitting form', error)
   }
 }
@@ -42,7 +42,7 @@ const submit = async (data: ContactForm) => {
 <template>
   <div>
     <PageTitle>Contact Me</PageTitle>
-    <div class="flex flex-col justify-between w-full p-6 ring ring-dark/10 bg-white/20 dark:(bg-white/10 ring-white/30) rounded-lg">
+    <div class="w-full flex flex-col justify-between rounded-lg bg-white/20 p-6 ring ring-dark/10 dark:(bg-white/10 ring-white/30)">
       <FormKit id="contact" type="form" @submit="submit">
         <FormKit
           label="Name"

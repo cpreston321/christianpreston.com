@@ -9,26 +9,26 @@ interface Links {
 const links: Links[] = [
   {
     name: 'Home',
-    to: '/'
+    to: '/',
   },
   {
     name: 'Projects',
-    to: '/projects'
+    to: '/projects',
   },
   {
     name: 'About',
-    to: '/about'
+    to: '/about',
   },
   {
     name: 'Contact',
-    to: '/contact'
-  }
+    to: '/contact',
+  },
 ]
 
 /**
  * Toggle between system, light and dark theme
  */
-const toggleTheme = () => {
+function toggleTheme() {
   const values = ['system', 'light', 'dark']
   const index = values.indexOf(colorMode.preference)
   const next = (index + 1) % values.length
@@ -39,24 +39,24 @@ const toggleTheme = () => {
 <template>
   <header
     id="header"
-    class="z-12 fixed top-0 left-0 right-0 dark:text-white backdrop-blur-sm"
+    class="fixed left-0 right-0 top-0 z-12 backdrop-blur-sm dark:text-white"
   >
-    <div class="flex flex-row justify-between max-w-screen-lg p-4 mx-auto">
+    <div class="mx-auto max-w-screen-lg flex flex-row justify-between p-4">
       <NuxtLink class="self-center" to="/">
         <NuxtImg v-if="colorMode.value === 'dark'" class="w-6" src="/logo-dark.png" alt="Dark CP logo" />
         <NuxtImg v-else class="w-6" src="/logo.png" alt="Light CP logo" />
       </NuxtLink>
       <nav class="flex flex-row justify-between rounded-lg p-.5 ring ring-black/20 dark:ring-white/20">
-        <ul class="flex justify-center text-xs md:text-md font-bold">
+        <ul class="md:text-md flex justify-center text-xs font-bold">
           <li
             v-for="(link, idx) in links"
             :key="link.name"
-            class="p-2 md:px-3 self-center rounded-lg transition-colors ease-in duration-200"
+            class="self-center rounded-md p-2 transition-colors duration-200 ease-in md:px-3"
             :class="{
               'bg-black/10 dark:(bg-white/20)':
                 route.path === link.to,
               'hover:(bg-black/10) dark:hover:(bg-white/20)': route.path !== link.to,
-              'ml-1': idx !== 0
+              'ml-1': idx !== 0,
             }"
           >
             <NuxtLink class="rounded py-1" :to="link.to">
@@ -64,10 +64,10 @@ const toggleTheme = () => {
             </NuxtLink>
           </li>
           <li
-            class="ml-1 px-3 flex items-center h-full rounded-lg hover:(bg-black/10) dark:hover:(bg-white/30)"
+            class="ml-1 h-full flex items-center rounded-lg px-3 hover:(bg-black/10) dark:hover:(bg-white/30)"
           >
             <button
-              class="flex items-center text-lg self-center"
+              class="flex items-center self-center text-lg"
               aria-label="Toggle Dark mode"
               @click="toggleTheme()"
             >
