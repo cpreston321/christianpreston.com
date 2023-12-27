@@ -1,7 +1,7 @@
 {
   "name": "@cpreston321/portfolio",
   "private": true,
-  "packageManager": "pnpm@8.12.1",
+  "packageManager": "pnpm@8.13.1",
   "description": "CP's Portfolio site - built on Nuxt 3",
   "repository": {
     "type": "git",
@@ -20,10 +20,10 @@
     "ua-parser-js": "^1.0.37"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.4.6",
+    "@antfu/eslint-config": "^2.6.0",
     "@formkit/addons": "^1.4.0",
     "@formkit/nuxt": "^1.4.0",
-    "@nuxt/content": "^2.9.0",
+    "@nuxt/content": "^2.10.0",
     "@nuxt/image": "^1.1.0",
     "@nuxthq/studio": "^1.0.6",
     "@nuxtjs/color-mode": "^3.3.2",
@@ -34,10 +34,10 @@
     "@unocss/nuxt": "^0.58.0",
     "@vueuse/motion": "^2.0.0",
     "@vueuse/nuxt": "^10.7.0",
-    "eslint": "npm:eslint-ts-patch@8.55.0-1",
-    "eslint-ts-patch": "8.55.0-1",
+    "eslint": "npm:eslint-ts-patch@8.56.0-0",
+    "eslint-ts-patch": "8.56.0-0",
     "lint-staged": "^15.2.0",
-    "nuxt": "3.8.2",
+    "nuxt": "3.9.0",
     "nuxt-icon": "^0.6.7",
     "nuxt-umami": "^2.5.6",
     "playwright": "^1.40.1",
