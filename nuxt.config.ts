@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     },
   },
 
-  $development: {
+  $production: {
     hub: {
       remote: true,
     },
