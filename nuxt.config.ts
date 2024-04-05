@@ -3,17 +3,6 @@ export default defineNuxtConfig({
   css: ['@unocss/reset/tailwind.css', '@/assets/formkit.css'],
   devtools: { enabled: true },
 
-  runtimeConfig: {
-    turnstile: {
-      secretKey: undefined,
-    },
-    public: {
-      turnstile: {
-        siteKey: '1x00000000000000000000AA',
-      },
-    },
-  },
-
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/jpeg', href: '/favicon.jpeg' }],
