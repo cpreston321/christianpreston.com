@@ -100,6 +100,9 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    experimental: {
+      openAPI: true,
+    },
     prerender: {
       routes: ['/sitemap.xml'],
     },
