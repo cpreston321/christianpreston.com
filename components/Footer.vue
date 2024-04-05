@@ -11,7 +11,7 @@
           name: 'Buy Me A Coffee',
         })"
       >
-        <NuxtImg class="w-40" src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&slug=cpreston321&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" alt="Buy Me a Coffee" />
+        <NuxtImg class="w-40" src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&slug=cpreston321&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" alt="Buy Me a Coffee" lazy />
       </a>
       <div class="flex flex-row items-center space-x-2">
         <div class="self-center">

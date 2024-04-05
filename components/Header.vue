@@ -43,8 +43,8 @@ function toggleTheme() {
   >
     <div class="mx-auto max-w-screen-lg flex flex-row justify-between p-4">
       <NuxtLink class="self-center" to="/">
-        <NuxtImg v-if="colorMode.value === 'dark'" class="w-6" src="/logo-dark.png" alt="Dark CP logo" />
-        <NuxtImg v-else class="w-6" src="/logo.png" alt="Light CP logo" />
+        <NuxtImg v-if="colorMode.value === 'dark'" class="w-6" src="/logo-dark.png" alt="Dark CP logo" lazy />
+        <NuxtImg v-else class="w-6" src="/logo.png" alt="Light CP logo" lazy />
       </NuxtLink>
       <nav class="flex flex-row justify-between rounded-lg p-.5 ring ring-black/20 dark:ring-white/20">
         <ul class="md:text-md flex justify-center text-xs font-bold">

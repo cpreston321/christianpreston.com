@@ -19,6 +19,7 @@ useSeoMeta({
           class="rounded-lg ring ring-black/20 md:w-30 dark:ring-white/20"
           src="/profile_image.jpeg"
           alt="Profile Picture"
+          lazy
         />
       </NuxtLink>
       <div>
