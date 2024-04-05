@@ -49,9 +49,10 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------
    */
   modules: [
+    'nuxt-build-cache',
     '@nuxthub/core',
-    'nuxt-icon',
     '@nuxtjs/turnstile',
+    'nuxt-icon',
     '@unocss/nuxt',
     '@nuxt/content',
     '@nuxt/image',
