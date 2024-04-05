@@ -7,10 +7,9 @@ export default defineConfig({
   presets: [
     presetUno(),
     presetWebFonts({
+      provider: 'bunny',
       fonts: {
-        sans: 'DM Sans',
-        serif: 'DM Serif Display',
-        mono: 'DM Mono',
+        sans: 'DM Sans,200,400,700,800',
       },
     }),
     presetTypography(),

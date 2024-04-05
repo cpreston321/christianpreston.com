@@ -1,9 +1,8 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  devtools: true,
   css: ['@unocss/reset/tailwind.css', '@/assets/formkit.css'],
+  devtools: { enabled: true },
   runtimeConfig: {
-    discordWebhookUrl: '',
     turnstile: {
       secretKey: undefined,
     },
@@ -44,17 +43,16 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------
    */
   modules: [
+    '@nuxthub/core',
     'nuxt-icon',
     '@nuxtjs/turnstile',
     '@unocss/nuxt',
     '@nuxt/content',
     '@nuxt/image',
     '@vueuse/nuxt',
-    '@nuxtseo/module',
-    // '@vueuse/motion/nuxt',
+    '@nuxtjs/seo',
     '@formkit/nuxt',
     '@nuxtjs/color-mode',
-    '@nuxthq/studio',
     '@nuxt/image',
   ],
 
@@ -63,10 +61,14 @@ export default defineNuxtConfig({
   },
 
   site: {
-    defaultLocale: 'en-US',
+    url: 'https://christianpreston.com',
     name: 'Christian Preston',
     description: 'I’m a self-taught software developer based in Indianapolis, IN, with a passion for collaboration, building, contributing, and continuous learning. Explore my portfolio and experience in web development, software engineering, and more.',
-    url: 'https://christianpreston.com',
+    defaultLocale: 'en',
+  },
+
+  ogImage: {
+    enabled: false,
   },
 
   // motion: {

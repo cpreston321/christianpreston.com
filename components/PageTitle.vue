@@ -2,6 +2,7 @@
 interface TitleProps {
   hideBack?: boolean
 }
+
 withDefaults(defineProps<TitleProps>(), {
   hideBack: false,
 })

@@ -27,6 +27,7 @@ withDefaults(defineProps<ProjectCardProps>(), {
         :src="project.preview"
         :title="project.name"
         :alt="project.name"
+        lazy
       />
     </a>
     <div class="flex flex-col p-4">

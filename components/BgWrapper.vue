@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const blobsPositions: string[] = [
-  'bottom-0 left-0',
-  'bottom-0 left-3/4',
-  'bottom-0 left-1/2',
+  'bottom-40 left-0',
+  'bottom-12 left-3/4',
+  'bottom-18 left-1/2',
   'bottom-0 right-1/2',
   'top-0 -left-20',
 ]

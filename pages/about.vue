@@ -58,7 +58,7 @@ useSeoMeta({
       <h2 class="text-2xl font-bold sm:text-2xl">
         Let's Connect
       </h2>
-      <SocialLinks />
+      <SocialLinks class="mt-2" />
     </div>
   </div>
 </template>

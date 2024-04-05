@@ -1,23 +1,21 @@
 <script lang="ts" setup>
 const { socials } = useAppConfig()
 
-const icons = ref(
-  new Map([
-    ['github', 'logos:github-icon'],
-    ['x', 'mingcute:social-x-line'],
-    ['linkedin', 'logos:linkedin-icon'],
-  ]),
-)
+const icons = {
+  github: 'simple-icons:github',
+  x: 'simple-icons:x',
+  linkedin: 'simple-icons:linkedin',
+}
 
-function icon(name: string) {
-  return icons.value.get(name)
+function icon(name: keyof typeof socials) {
+  return icons[name]
 }
 </script>
 
 <template>
-  <ul v-if="Object.keys(socials).length > 0" class="mt-3 flex flex-row space-x-3">
+  <ul class="flex flex-row space-x-3">
     <li
-      v-for="[key, url] of Object.entries(socials)"
+      v-for="(url, key) in socials"
       :key="key"
     >
       <a
@@ -27,8 +25,8 @@ function icon(name: string) {
         :title="key"
       >
         <Icon
-          :name="icon(key) as string"
-          :class="{ 'dark:(text-black)': key === 'github' || key === 'x' }"
+          :name="icon(key)"
+          color="black"
         />
       </a>
     </li>

@@ -28,12 +28,7 @@ const cords = computed(() => {
 
   <!-- Main Content -->
   <BgWrapper>
-    <OgImageScreenshot
-      selector="main"
-      mask="#nuxt-devtools-container, #footer, #header, .nuxt-devtools-toggle"
-      :delay="1200"
-    />
-    <NuxtPage class="z-10" />
+    <NuxtPage class="z-10 font-sans" />
   </BgWrapper>
 
   <!-- Footer  -->

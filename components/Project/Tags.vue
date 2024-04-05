@@ -35,7 +35,7 @@ function findIcon(name: string): string {
 </script>
 
 <template>
-  <div v-if="tags.length > 0" class="mb-2 flex flex-wrap space-x-3">
+  <div v-if="tags.length > 0" class="mb-2 flex flex-wrap gap-3">
     <div
       v-for="(tag, idx) in tags"
       :key="idx"
