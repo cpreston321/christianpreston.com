@@ -13,12 +13,6 @@ export default defineNuxtConfig({
     },
   },
 
-  $production: {
-    hub: {
-      remote: true,
-    },
-  },
-
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/jpeg', href: '/favicon.jpeg' }],
