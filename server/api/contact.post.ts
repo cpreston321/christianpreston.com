@@ -9,6 +9,7 @@ export default defineEventHandler(async (event) => {
     throw createError({
       statusCode: 403,
       statusMessage: 'Recaptcha Failed, Please try again.',
+      data: verify,
     })
   }
 

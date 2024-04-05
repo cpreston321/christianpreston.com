@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   css: ['@unocss/reset/tailwind.css', '@/assets/formkit.css'],
   devtools: { enabled: true },
+
   runtimeConfig: {
     turnstile: {
       secretKey: undefined,
@@ -70,24 +71,6 @@ export default defineNuxtConfig({
   ogImage: {
     enabled: false,
   },
-
-  // motion: {
-  //   directives: {
-  //     'pop-bottom': {
-  //       initial: {
-  //         y: 100,
-  //         opacity: 0
-  //       },
-  //       enter: {
-  //         y: 0,
-  //         opacity: 1,
-  //         transition: {
-  //           delay: 200
-  //         }
-  //       }
-  //     }
-  //   }
-  // },
 
   image: {
     domains: ['github.com', 'buymeacoffee.com'],
