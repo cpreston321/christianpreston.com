@@ -59,7 +59,6 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@formkit/nuxt',
     '@nuxtjs/color-mode',
-    '@nuxt/image',
   ],
 
   colorMode: {
