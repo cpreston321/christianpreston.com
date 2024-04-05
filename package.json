@@ -40,11 +40,7 @@
     "nuxt": "3.11.2",
     "nuxt-icon": "^0.6.10",
     "nuxt-umami": "^2.6.0",
-    "simple-git-hooks": "^2.11.1",
-    "wrangler": "^3.47.1"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "wrangler": "^3.48.0"
   },
   "lint-staged": {
     "*": "eslint --fix"
@@ -54,6 +50,10 @@
     "@fortawesome/free-regular-svg-icons",
     "@fortawesome/free-solid-svg-icons",
     "es5-ext",
-    "json-editor-vue"
+    "esbuild",
+    "json-editor-vue",
+    "sharp",
+    "simple-git-hooks",
+    "workerd"
   ]
 }
