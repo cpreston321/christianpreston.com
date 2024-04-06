@@ -46,6 +46,12 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
   ],
 
+  runtimeConfig: {
+    turnstile: {
+      secretKey: '',
+    },
+  },
+
   colorMode: {
     classSuffix: '',
   },
