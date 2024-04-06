@@ -1,3 +1,5 @@
+import process from 'node:process'
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   css: ['@unocss/reset/tailwind.css', '@/assets/formkit.css'],
@@ -48,6 +50,21 @@ export default defineNuxtConfig({
 
   colorMode: {
     classSuffix: '',
+  },
+
+  runtimeConfig: {
+    // !IMPORTANT: Nuxi doesn't seem to automatically inject at runtime
+    // Temporarily using process.env for now
+    public: {
+      umamiId: process.env.NUXT_PUBLIC_UMAMI_ID || '',
+      umamiHost: process.env.NUXT_PUBLIC_UMAMI_HOST || '',
+      turnstile: {
+        siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY || '',
+      },
+    },
+    turnstile: {
+      secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY || '',
+    },
   },
 
   site: {
