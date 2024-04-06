@@ -2,7 +2,6 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event)
   const { token, name, email, message } = body
   const verify = await verifyTurnstileToken(token || body['cf-turnstile-response'])
-  const runtimeConfig = useRuntimeConfig()
 
   // 403 Forbidden - Turnstile token is invalid.
   // Most likely the token is invalid or the user is a bot.
@@ -10,11 +9,7 @@ export default defineEventHandler(async (event) => {
     throw createError({
       statusCode: 403,
       statusMessage: 'Recaptcha Failed, Please try again.',
-      data: {
-        body,
-        verify,
-        runtimeConfig,
-      },
+      data: verify,
     })
   }
 
