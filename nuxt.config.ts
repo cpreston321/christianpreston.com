@@ -46,10 +46,6 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
   ],
 
-  turnstile: {
-    siteKey: '0x4AAAAAAAAuGiYvdE8yBOGH',
-  },
-
   colorMode: {
     classSuffix: '',
   },
