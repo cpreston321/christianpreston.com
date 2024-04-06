@@ -2,6 +2,7 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event)
   const { token, name, email, message } = body
   const verify = await verifyTurnstileToken(token || body['cf-turnstile-response'])
+  const runtimeConfig = useRuntimeConfig()
 
   // 403 Forbidden - Turnstile token is invalid.
   // Most likely the token is invalid or the user is a bot.
@@ -12,6 +13,7 @@ export default defineEventHandler(async (event) => {
       data: {
         body,
         verify,
+        runtimeConfig,
       },
     })
   }
