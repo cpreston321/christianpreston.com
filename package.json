@@ -16,7 +16,7 @@
     "db:generate": "drizzle-kit generate:sqlite"
   },
   "dependencies": {
-    "@nuxthub/core": "^0.4.1",
+    "@nuxthub/core": "^0.5.11",
     "drizzle-orm": "^0.30.7",
     "nuxt-build-cache": "^0.1.1"
   },
