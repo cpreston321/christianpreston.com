@@ -33,7 +33,7 @@
     "@unocss/eslint-plugin": "^0.58.9",
     "@unocss/nuxt": "^0.58.9",
     "@vueuse/nuxt": "^10.9.0",
-    "drizzle-kit": "^0.20.14",
+    "drizzle-kit": "^0.21.4",
     "eslint": "npm:eslint-ts-patch@8.57.0-0",
     "eslint-ts-patch": "8.57.0-0",
     "lint-staged": "^15.2.2",
