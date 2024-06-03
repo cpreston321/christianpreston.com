@@ -31,7 +31,7 @@
     "@nuxtjs/turnstile": "^0.7.1",
     "@types/ua-parser-js": "^0.7.39",
     "@unocss/eslint-plugin": "^0.58.9",
-    "@unocss/nuxt": "^0.58.9",
+    "@unocss/nuxt": "^0.60.4",
     "@vueuse/nuxt": "^10.9.0",
     "drizzle-kit": "^0.20.14",
     "eslint": "npm:eslint-ts-patch@8.57.0-0",
