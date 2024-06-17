@@ -37,7 +37,7 @@
     "eslint": "npm:eslint-ts-patch@8.57.0-0",
     "eslint-ts-patch": "8.57.0-0",
     "lint-staged": "^15.2.2",
-    "nuxt": "3.11.2",
+    "nuxt": "3.12.2",
     "nuxt-icon": "^0.6.10",
     "nuxt-umami": "^2.6.0",
     "wrangler": "^3.48.0"
